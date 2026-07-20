@@ -31,7 +31,24 @@ export interface RoleplayScenario {
   opener: string;
 }
 
+/**
+ * id của mục "chat tự do" — không có bối cảnh cố định, người học muốn nói gì
+ * thì nói. Tách ra thành hằng số vì giao diện hiển thị mục này riêng một nhóm.
+ */
+export const FREE_CHAT_ID = "free";
+
 export const ROLEPLAYS: RoleplayScenario[] = [
+  {
+    id: FREE_CHAT_ID,
+    titleVi: "Chat tự do",
+    emoji: "💬",
+    setting:
+      "You and the learner are friendly colleagues having an open conversation. " +
+      "There is no fixed scenario: let the learner choose the topic and follow " +
+      "wherever they take it — work, hobbies, family, weekend plans, anything. " +
+      "Do not steer the conversation back to a preset situation.",
+    opener: "Hi! I'm free for a chat. What would you like to talk about today?",
+  },
   {
     id: "coffee",
     titleVi: "Tán gẫu ở khu pha cà phê",

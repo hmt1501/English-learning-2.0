@@ -6,7 +6,16 @@ import { getDeck, getTopic } from "@/lib/content";
 import { getMode } from "@/lib/modes";
 import { gradeAnswer, isPass, VERDICT_LABEL, type StudyMode, type Verdict } from "@/lib/grade";
 import { pickSessionCards } from "@/lib/stats";
-import { loadWordStats } from "@/lib/db";
+import { clearSession, loadSessions, loadWordStats, saveSession } from "@/lib/db";
+import {
+  advanceCheckpoint,
+  createCheckpoint,
+  isResumable,
+  reviseCheckpoint,
+  sessionKey,
+  type SessionCheckpoint,
+} from "@/lib/session";
+import { toLocalDateString } from "@/lib/date";
 import { playAudio } from "@/lib/audio";
 import { useWordStats } from "@/lib/useStats";
 import { useMounted } from "@/lib/useMounted";
@@ -15,6 +24,10 @@ import { useCompleteActivity } from "@/lib/useDaily";
 import { Button, Card, Page, PageHeader, PlayButton, ProgressBar } from "@/components/ui";
 import type { Card as CardType } from "@/lib/content-schema";
 
+/**
+ * "learn" chỉ có bước xem thẻ (không kiểm tra); hai chế độ dịch có thêm bước
+ * trả lời và xem kết quả.
+ */
 type Phase = "preview" | "answer" | "result" | "done";
 
 const VERDICT_STYLE: Record<Verdict, string> = {
@@ -31,40 +44,75 @@ const VERDICT_EMOJI: Record<Verdict, string> = {
 
 export function StudySession({ topicId, mode }: { topicId: string; mode: StudyMode }) {
   const mounted = useMounted();
-  const { ready, record, revise } = useWordStats();
+  const { record, revise } = useWordStats();
   const wordsPerSession = useAppStore((s) => s.wordsPerSession);
   const complete = useCompleteActivity();
 
   const topic = getTopic(topicId);
   const modeInfo = getMode(mode);
   const deck = useMemo(() => getDeck(topicId), [topicId]);
+  const key = sessionKey(topicId, mode);
 
-  // Danh sách thẻ của buổi học được CHỐT MỘT LẦN khi vào trang: nếu tính lại
-  // theo stats thì thẻ vừa trả lời đúng sẽ bị đẩy ra giữa chừng, rất rối.
-  // Đọc thống kê trực tiếp ở đây (thay vì chờ hook) để việc setState nằm trong
-  // callback bất đồng bộ — đúng với quy tắc của React Compiler.
   const [cards, setCards] = useState<CardType[] | null>(null);
-  useEffect(() => {
-    let alive = true;
-    loadWordStats().then((snapshot) => {
-      if (!alive) return;
-      setCards(pickSessionCards(deck, snapshot, mode, wordsPerSession));
-    });
-    return () => {
-      alive = false;
-    };
-  }, [deck, mode, wordsPerSession]);
-
   const [index, setIndex] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [resumed, setResumed] = useState(false);
+
   const [phase, setPhase] = useState<Phase>(mode === "learn" ? "preview" : "answer");
   const [answer, setAnswer] = useState("");
   const [verdict, setVerdict] = useState<Verdict | null>(null);
-  const [correctCount, setCorrectCount] = useState(0);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  /** Checkpoint hiện tại, chỉ đọc/ghi trong handler nên dùng ref là hợp lệ. */
+  const cpRef = useRef<SessionCheckpoint | null>(null);
+
+  /**
+   * Vào trang: nối tiếp buổi đang dở nếu có, không thì chốt bộ thẻ mới.
+   * setState nằm trong callback bất đồng bộ nên hợp quy tắc React Compiler.
+   */
+  useEffect(() => {
+    let alive = true;
+
+    (async () => {
+      const [stats, sessions] = await Promise.all([loadWordStats(), loadSessions()]);
+      if (!alive) return;
+
+      const validIds = new Set(deck.map((c) => c.id));
+      const saved = sessions[key];
+
+      if (isResumable(saved, validIds)) {
+        const byId = new Map(deck.map((c) => [c.id, c]));
+        const resumedCards = saved.cardIds
+          .map((id) => byId.get(id))
+          .filter((c): c is CardType => c !== undefined);
+
+        cpRef.current = saved;
+        setCards(resumedCards);
+        setIndex(saved.index);
+        setCorrectCount(saved.correctCount);
+        setResumed(true);
+        setPhase(mode === "learn" ? "preview" : "answer");
+        return;
+      }
+
+      const picked = pickSessionCards(deck, stats, mode, wordsPerSession);
+      cpRef.current = createCheckpoint(
+        picked.map((c) => c.id),
+        toLocalDateString(new Date()),
+        Date.now(),
+      );
+      setCards(picked);
+      setIndex(0);
+      setCorrectCount(0);
+    })();
+
+    return () => {
+      alive = false;
+    };
+  }, [deck, key, mode, wordsPerSession]);
 
   const card = cards?.[index];
   const total = cards?.length ?? 0;
-
   const prompt = card ? promptFor(card, mode) : null;
 
   const play = useCallback(() => {
@@ -75,36 +123,79 @@ export function StudySession({ topicId, mode }: { topicId: string; mode: StudyMo
     });
   }, [card, mode]);
 
+  /** Ghi checkpoint NGAY sau mỗi câu — thoát giữa chừng vẫn giữ được. */
+  const commitProgress = useCallback(
+    async (passed: boolean) => {
+      const cp = cpRef.current;
+      if (!cp) return;
+      const next = advanceCheckpoint(cp, passed, Date.now());
+      cpRef.current = next;
+      await saveSession(key, next);
+    },
+    [key],
+  );
+
+  /** Chế độ "Học từ vựng": chỉ xem thẻ rồi sang từ tiếp theo, không kiểm tra. */
+  const nextWord = useCallback(async () => {
+    if (!card) return;
+
+    await record(mode, card.id, true);
+    await commitProgress(true);
+    setCorrectCount((c) => c + 1);
+
+    if (index >= total - 1) {
+      setPhase("done");
+      await clearSession(key);
+      await complete({
+        activityId: `vocab:${topicId}:${mode}`,
+        type: "vocab",
+        refId: topicId,
+        count: total,
+      });
+      return;
+    }
+    setIndex((i) => i + 1);
+  }, [card, mode, record, commitProgress, index, total, key, complete, topicId]);
+
   const submit = useCallback(async () => {
     if (!card || !prompt) return;
     const result = gradeAnswer(answer, prompt.expected, mode);
+    const passed = isPass(result.verdict);
+
     setVerdict(result.verdict);
     setPhase("result");
-    if (isPass(result.verdict)) setCorrectCount((c) => c + 1);
-    // LƯU NGAY sau mỗi câu — thoát giữa chừng vẫn giữ được tiến độ.
-    await record(mode, card.id, isPass(result.verdict));
-  }, [answer, card, prompt, mode, record]);
+    if (passed) setCorrectCount((c) => c + 1);
+
+    await record(mode, card.id, passed);
+    await commitProgress(passed);
+  }, [answer, card, prompt, mode, record, commitProgress]);
 
   /** Người học tự chấm lại kết quả của chính mình. */
   const selfGrade = useCallback(
     async (passed: boolean) => {
       if (!card || verdict === null) return;
       if (isPass(verdict) === passed) return;
+
       setCorrectCount((c) => c + (passed ? 1 : -1));
       setVerdict(passed ? "correct" : "wrong");
+
       await revise(mode, card.id, passed);
+      if (cpRef.current) {
+        const next = reviseCheckpoint(cpRef.current, passed, Date.now());
+        cpRef.current = next;
+        await saveSession(key, next);
+      }
     },
-    [card, verdict, mode, revise],
+    [card, verdict, mode, revise, key],
   );
 
   const next = useCallback(async () => {
-    const isLast = index >= total - 1;
     setAnswer("");
     setVerdict(null);
 
-    if (isLast) {
+    if (index >= total - 1) {
       setPhase("done");
-      // CHỈ ghi công "đã học hôm nay" khi hoàn tất cả buổi.
+      await clearSession(key);
       await complete({
         activityId: `vocab:${topicId}:${mode}`,
         type: "vocab",
@@ -115,8 +206,8 @@ export function StudySession({ topicId, mode }: { topicId: string; mode: StudyMo
     }
 
     setIndex((i) => i + 1);
-    setPhase(mode === "learn" ? "preview" : "answer");
-  }, [index, total, mode, topicId, complete]);
+    setPhase("answer");
+  }, [index, total, key, complete, topicId, mode]);
 
   // Tự đưa con trỏ vào ô nhập khi sang câu mới.
   useEffect(() => {
@@ -125,7 +216,7 @@ export function StudySession({ topicId, mode }: { topicId: string; mode: StudyMo
 
   if (!topic || !modeInfo) return null;
 
-  if (!mounted || !ready || !cards) {
+  if (!mounted || !cards) {
     return (
       <>
         <PageHeader title={modeInfo.titleVi} subtitle={topic.titleVi} back />
@@ -157,7 +248,9 @@ export function StudySession({ topicId, mode }: { topicId: string; mode: StudyMo
           <Card className="text-center">
             <p className="text-5xl">🎉</p>
             <p className="mt-3 text-lg font-semibold">
-              Đúng {correctCount}/{total} câu
+              {mode === "learn"
+                ? `Đã xem ${total}/${total} cụm từ`
+                : `Đúng ${correctCount}/${total} câu`}
             </p>
             <p className="mt-1 text-sm text-muted">
               Tiến độ đã được lưu và ghi công vào kế hoạch hôm nay.
@@ -191,7 +284,13 @@ export function StudySession({ topicId, mode }: { topicId: string; mode: StudyMo
           <ProgressBar ratio={index / total} label={`${index + 1}/${total}`} />
         </div>
 
-        {/* ---- Bước xem trước (chỉ có ở chế độ Học từ vựng) ---- */}
+        {resumed && index > 0 && (
+          <p className="mb-3 rounded-xl bg-muted-bg p-3 text-sm">
+            ↩️ Học tiếp buổi đang dở — bạn đã làm {index}/{total} câu.
+          </p>
+        )}
+
+        {/* ---- Chế độ Học từ vựng: chỉ xem thẻ, nghe, rồi sang từ tiếp ---- */}
         {phase === "preview" && card && (
           <>
             <Card>
@@ -207,17 +306,17 @@ export function StudySession({ topicId, mode }: { topicId: string; mode: StudyMo
               <p className="mt-3 rounded-xl bg-muted-bg p-3 text-sm">💡 {card.cue}</p>
 
               <div className="mt-3">
-                <PlayButton onPlay={play} />
+                <PlayButton onPlay={play} label="Nghe" />
               </div>
             </Card>
 
-            <Button className="mt-4 w-full" onClick={() => setPhase("answer")}>
-              Tôi nhớ rồi, kiểm tra thử
+            <Button className="mt-4 w-full" onClick={() => void nextWord()}>
+              {index >= total - 1 ? "Kết thúc buổi học" : "Từ tiếp theo"}
             </Button>
           </>
         )}
 
-        {/* ---- Bước trả lời ---- */}
+        {/* ---- Bước trả lời (chỉ có ở hai chế độ dịch câu) ---- */}
         {phase === "answer" && card && prompt && (
           <>
             <Card>

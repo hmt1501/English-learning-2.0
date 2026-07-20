@@ -16,24 +16,80 @@ const goodStore = {
 
 const goodStats = { "greetings-01": { correct: 2, wrong: 1, lastSeen: 1000 } };
 const goodLog = [{ date: "2026-07-20", type: "vocab", refId: "greetings", count: 10, at: 1000 }];
+const goodSessions = {
+  "greetings:learn": {
+    cardIds: ["greetings-01", "greetings-02"],
+    index: 1,
+    correctCount: 1,
+    date: "2026-07-20",
+    updatedAt: 1000,
+  },
+};
 
 describe("buildBackup", () => {
-  it("gói đủ ba phần và gắn phiên bản", () => {
-    const b = buildBackup(goodStore, goodStats, goodLog, "2026-07-20T10:00:00.000Z");
+  it("gói đủ các phần và gắn phiên bản", () => {
+    const b = buildBackup(
+      goodStore,
+      goodStats,
+      goodLog,
+      "2026-07-20T10:00:00.000Z",
+      goodSessions,
+    );
     expect(b.app).toBe("tieng-anh-cong-so");
     expect(b.version).toBe(BACKUP_VERSION);
     expect(b.store.learnerName).toBe("Hoàng");
     expect(b.wordStats["greetings-01"].correct).toBe(2);
     expect(b.activityLog).toHaveLength(1);
+    expect(b.sessions["greetings:learn"].index).toBe(1);
   });
 
   it("xuất ra rồi nhập lại thì dữ liệu không đổi", () => {
-    const b = buildBackup(goodStore, goodStats, goodLog, "2026-07-20T10:00:00.000Z");
+    const b = buildBackup(
+      goodStore,
+      goodStats,
+      goodLog,
+      "2026-07-20T10:00:00.000Z",
+      goodSessions,
+    );
     const round = parseBackup(JSON.parse(JSON.stringify(b)));
     expect(round.store).toEqual(goodStore);
     expect(round.wordStats).toEqual(goodStats);
     expect(round.activityLog).toEqual(goodLog);
+    expect(round.sessions).toEqual(goodSessions);
     expect(round.skipped).toEqual([]);
+  });
+
+  it("không truyền sessions thì vẫn chạy (file sao lưu bản cũ)", () => {
+    const b = buildBackup(goodStore, goodStats, goodLog, "2026-07-20T10:00:00.000Z");
+    expect(b.sessions).toEqual({});
+  });
+});
+
+describe("parseBackup — buổi học dở", () => {
+  it("giữ buổi hợp lệ, bỏ buổi hỏng", () => {
+    const r = parseBackup({
+      sessions: {
+        ...goodSessions,
+        hỏng: { cardIds: ["a"], index: -1, correctCount: 0, date: "2026-07-20", updatedAt: 1 },
+        saiNgày: { cardIds: ["a"], index: 1, correctCount: 0, date: "20/07/2026", updatedAt: 1 },
+        khôngPhảiObject: 7,
+      },
+    });
+    expect(Object.keys(r.sessions)).toEqual(["greetings:learn"]);
+    expect(r.skipped[0]).toContain("3");
+  });
+
+  it("file sao lưu cũ không có phần sessions thì không báo lỗi", () => {
+    const r = parseBackup({ store: goodStore, wordStats: goodStats, activityLog: goodLog });
+    expect(r.sessions).toEqual({});
+    expect(r.skipped).toEqual([]);
+  });
+
+  it("sessions sai định dạng thì báo riêng, không ảnh hưởng phần khác", () => {
+    const r = parseBackup({ wordStats: goodStats, sessions: [] });
+    expect(r.wordStats).toEqual(goodStats);
+    expect(r.sessions).toEqual({});
+    expect(r.skipped).toHaveLength(1);
   });
 });
 

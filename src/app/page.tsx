@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { formatDateVi } from "@/lib/date";
 import { useDailyPlan } from "@/lib/useDaily";
+import { useSessions } from "@/lib/useSessions";
+import { progressLabel, sessionKey } from "@/lib/session";
 import { useAppStore } from "@/lib/store";
 import { useMounted } from "@/lib/useMounted";
 import { Card, LinkCard, Page, PageHeader, ProgressBar } from "@/components/ui";
@@ -16,6 +18,7 @@ const LEVEL_LABEL: Record<number, string> = {
 export default function TodayPage() {
   const mounted = useMounted();
   const { today, plan, doneIds, ready, complete } = useDailyPlan();
+  const { sessions } = useSessions();
 
   const learnerName = useAppStore((s) => s.learnerName);
   const streak = useAppStore((s) => s.streak);
@@ -77,21 +80,34 @@ export default function TodayPage() {
         <div className="flex flex-col gap-2">
           {mounted &&
             ready &&
-            plan.map((activity) => (
-              <LinkCard
-                key={activity.id}
-                href={activity.href}
-                emoji={ACTIVITY_EMOJI[activity.type]}
-                title={activity.titleVi}
-                subtitle={activity.subtitleVi}
-                done={doneIds.includes(activity.id)}
-                trailing={
-                  <span className="shrink-0 text-xs text-muted">
-                    {activity.estMinutes}′
-                  </span>
-                }
-              />
-            ))}
+            plan.map((activity) => {
+              // Mục từ vựng đang làm dở thì hiện luôn số câu đã làm,
+              // không bắt phải học hết buổi mới thấy tiến độ.
+              const doing =
+                activity.type === "vocab" && activity.mode
+                  ? progressLabel(sessions[sessionKey(activity.refId, activity.mode)])
+                  : null;
+
+              return (
+                <LinkCard
+                  key={activity.id}
+                  href={activity.href}
+                  emoji={ACTIVITY_EMOJI[activity.type]}
+                  title={activity.titleVi}
+                  subtitle={
+                    doing
+                      ? `${activity.subtitleVi} · ↩️ đang dở ${doing}`
+                      : activity.subtitleVi
+                  }
+                  done={doneIds.includes(activity.id)}
+                  trailing={
+                    <span className="shrink-0 text-xs text-muted">
+                      {activity.estMinutes}′
+                    </span>
+                  }
+                />
+              );
+            })}
         </div>
 
         <h2 className="mb-2 mt-6 font-semibold">Luyện thêm</h2>

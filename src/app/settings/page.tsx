@@ -9,8 +9,10 @@ import {
 } from "@/lib/backup";
 import {
   loadActivityLog,
+  loadSessions,
   loadWordStats,
   saveActivityLog,
+  saveSessions,
   saveWordStats,
 } from "@/lib/db";
 import { toLocalDateString } from "@/lib/date";
@@ -67,6 +69,7 @@ export default function SettingsPage() {
       await loadWordStats(),
       await loadActivityLog(),
       now.toISOString(),
+      await loadSessions(),
     );
 
     const blob = new Blob([JSON.stringify(backup, null, 2)], {
@@ -95,6 +98,7 @@ export default function SettingsPage() {
         if (Object.keys(result.store).length > 0) replaceAll(result.store);
         if (Object.keys(result.wordStats).length > 0) await saveWordStats(result.wordStats);
         if (result.activityLog.length > 0) await saveActivityLog(result.activityLog);
+        if (Object.keys(result.sessions).length > 0) await saveSessions(result.sessions);
 
         setMessage(
           `Đã khôi phục: ${Object.keys(result.wordStats).length} mục từ vựng, ` +

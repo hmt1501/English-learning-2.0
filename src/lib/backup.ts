@@ -25,6 +25,14 @@ const ActivityLogEntrySchema = z.object({
   at: z.number().min(0),
 });
 
+const SessionCheckpointSchema = z.object({
+  cardIds: z.array(z.string()),
+  index: z.number().int().min(0),
+  correctCount: z.number().int().min(0),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  updatedAt: z.number().min(0),
+});
+
 const StoreSchema = z.object({
   learnerName: z.string(),
   level: z.union([z.literal(20), z.literal(40), z.literal(60)]),
@@ -41,6 +49,7 @@ const StoreSchema = z.object({
 export type BackupStore = z.infer<typeof StoreSchema>;
 export type BackupWordStat = z.infer<typeof WordStatSchema>;
 export type BackupLogEntry = z.infer<typeof ActivityLogEntrySchema>;
+export type BackupSession = z.infer<typeof SessionCheckpointSchema>;
 
 export interface BackupFile {
   app: "tieng-anh-cong-so";
@@ -49,12 +58,14 @@ export interface BackupFile {
   store: Partial<BackupStore>;
   wordStats: Record<string, BackupWordStat>;
   activityLog: BackupLogEntry[];
+  sessions: Record<string, BackupSession>;
 }
 
 export interface ImportResult {
   store: Partial<BackupStore>;
   wordStats: Record<string, BackupWordStat>;
   activityLog: BackupLogEntry[];
+  sessions: Record<string, BackupSession>;
   /** Mô tả tiếng Việt những gì đã bị bỏ qua vì sai kiểu. */
   skipped: string[];
 }
@@ -64,6 +75,7 @@ export function buildBackup(
   wordStats: Record<string, unknown>,
   activityLog: unknown[],
   exportedAt: string,
+  sessions: Record<string, unknown> = {},
 ): BackupFile {
   const parsed = parseBackup({
     app: "tieng-anh-cong-so",
@@ -72,6 +84,7 @@ export function buildBackup(
     store,
     wordStats,
     activityLog,
+    sessions,
   });
 
   return {
@@ -81,6 +94,7 @@ export function buildBackup(
     store: parsed.store,
     wordStats: parsed.wordStats,
     activityLog: parsed.activityLog,
+    sessions: parsed.sessions,
   };
 }
 
@@ -90,7 +104,13 @@ export function buildBackup(
  */
 export function parseBackup(raw: unknown): ImportResult {
   const skipped: string[] = [];
-  const empty: ImportResult = { store: {}, wordStats: {}, activityLog: [], skipped };
+  const empty: ImportResult = {
+    store: {},
+    wordStats: {},
+    activityLog: [],
+    sessions: {},
+    skipped,
+  };
 
   if (typeof raw !== "object" || raw === null || Array.isArray(raw)) {
     skipped.push("File sao lưu không đúng định dạng JSON của ứng dụng.");
@@ -149,7 +169,25 @@ export function parseBackup(raw: unknown): ImportResult {
     skipped.push("Bỏ qua phần nhật ký hoạt động vì sai định dạng.");
   }
 
-  return { store, wordStats, activityLog, skipped };
+  // --- sessions: bỏ từng buổi hỏng ---
+  const sessions: Record<string, BackupSession> = {};
+  if (
+    typeof obj.sessions === "object" &&
+    obj.sessions !== null &&
+    !Array.isArray(obj.sessions)
+  ) {
+    let bad = 0;
+    for (const [key, value] of Object.entries(obj.sessions as Record<string, unknown>)) {
+      const result = SessionCheckpointSchema.safeParse(value);
+      if (result.success) sessions[key] = result.data;
+      else bad += 1;
+    }
+    if (bad > 0) skipped.push(`Bỏ qua ${bad} buổi học dở bị hỏng.`);
+  } else if (obj.sessions !== undefined) {
+    skipped.push("Bỏ qua phần buổi học dở vì sai định dạng.");
+  }
+
+  return { store, wordStats, activityLog, sessions, skipped };
 }
 
 /** Tên file gợi ý khi tải sao lưu về. */

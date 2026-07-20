@@ -78,6 +78,12 @@ dịch ngược là ba kỹ năng khác nhau:
 Khoá trần cho `learn` là cố ý (tương thích ngược). Coi là **"đã thuộc" khi
 `correct >= 2`**.
 
+**`sessions: Record<"<topic>:<mode>", SessionCheckpoint>`**
+
+Checkpoint của buổi học đang làm dở: `{ cardIds, index, correctCount, date,
+updatedAt }`. `cardIds` giữ nguyên bộ thẻ đã chốt của buổi để lúc quay lại không
+bị đổi đề. Xoá khi buổi học hoàn tất.
+
 **`activityLog: { date, type, refId?, count?, at }[]`**
 
 `date` là `YYYY-MM-DD` theo **giờ địa phương**. Giữ 2000 dòng gần nhất. Đây cũng
@@ -90,7 +96,8 @@ là nguồn để biết chủ đề nào lâu chưa học (dùng cho việc xoa
 
 ### Sao lưu
 
-Một file JSON gồm cả ba phần: `store` + `wordStats` + `activityLog`.
+Một file JSON gồm: `store` + `wordStats` + `activityLog` + `sessions`.
+File sao lưu từ bản cũ (chưa có `sessions`) vẫn nhập được bình thường.
 
 ## 3. Quyết định thiết kế
 
@@ -139,10 +146,39 @@ ngữ cần chắc chắn hơn.
 sai, nên sau mỗi câu đều hiện đáp án đầy đủ và có nút để người học tự sửa
 verdict. Tự chấm lại **không** cộng thêm lượt trả lời, chỉ chuyển đúng↔sai.
 
-**Thoát giữa chừng vẫn lưu tiến độ, nhưng chưa ghi công ngày.** `wordStats` được
-ghi **ngay sau mỗi câu**. Còn "đã học hôm nay" (dòng trong `activityLog`, dấu ✅,
-streak) **chỉ** được ghi khi hoàn tất cả buổi. Học nửa chừng rồi thoát là có
-tiến độ từ vựng nhưng kế hoạch hôm nay chưa được đánh dấu.
+**Chế độ "Học từ vựng" không kiểm tra.** Đây là bước làm quen: xem cụm từ,
+nghĩa, câu ví dụ, nghe, rồi sang từ tiếp theo. Không gõ gì cả. Mỗi lần xem một
+thẻ được tính là **một lượt đúng**, nên xem đủ 2 lần là thẻ đó "đã thuộc" ở chế
+độ này. Muốn thực sự kiểm tra thì dùng hai chế độ dịch câu — ở đó mới có chấm
+bài và ngưỡng chặt.
+
+**Thoát giữa chừng vẫn lưu tiến độ, nhưng chưa ghi công ngày.** Sau **mỗi câu**
+app ghi hai thứ: `wordStats` và một **checkpoint** của buổi
+(`sessions[<topic>:<mode>]` trong IndexedDB). Nhờ checkpoint:
+
+- quay lại là học tiếp đúng câu đang dở, với **đúng bộ thẻ cũ** (không bị đổi đề);
+- trang Hôm nay và menu Từ vựng hiện ngay `↩️ đang dở 4/10`, không phải học hết
+  buổi mới thấy số;
+- buổi dở từ hôm trước vẫn nối tiếp được — cố ý không xét ngày, vì mất công đã
+  làm mới là điều khó chịu nhất.
+
+Checkpoint bị xoá khi buổi học hoàn tất. Còn "đã học hôm nay" (dòng trong
+`activityLog`, dấu ✅ trong kế hoạch, streak) **vẫn chỉ** được ghi khi hoàn tất
+cả buổi — làm dở thì thấy được tiến độ nhưng chưa được tính là xong mục đó.
+
+**Lời thoại ở phần Nghe ẩn mặc định.** Nhìn chữ ngay từ đầu thì thành bài đọc,
+không còn là bài nghe. Có nút *Hiện lời thoại* để mở ra đối chiếu; nút nghe từng
+câu vẫn dùng được khi đang ẩn.
+
+**Phát cả bài phải chờ từng câu phát xong.** `HTMLAudioElement.play()` trả về
+Promise resolve ngay khi âm thanh *bắt đầu*, không phải khi phát xong — dùng
+thẳng nó trong vòng lặp thì mỗi câu chỉ kịp kêu một tiếng rồi bị câu sau cắt.
+Vì vậy có riêng `playAudioUntilEnd()` chờ sự kiện `ended`, và luôn resolve kể cả
+khi bị dừng giữa chừng để vòng lặp không treo.
+
+**Chat tự do** là một mục riêng trong phần Chat AI, không có bối cảnh cố định —
+system prompt yêu cầu AI đi theo chủ đề người học chọn thay vì lái về một tình
+huống định sẵn.
 
 **Kế hoạch được ghim trong ngày.** Danh sách hoạt động chỉ phụ thuộc
 `planKey = ngày|mức|số từ`. Làm xong một mục giữa ngày không làm kế hoạch xáo

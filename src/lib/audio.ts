@@ -72,6 +72,66 @@ export async function playAudio(opts: PlayOptions): Promise<boolean> {
   }
 }
 
+/**
+ * Phát và CHỜ CHO ĐẾN KHI PHÁT XONG.
+ *
+ * Khác hẳn playAudio(): `HTMLAudioElement.play()` trả về Promise resolve ngay
+ * khi âm thanh BẮT ĐẦU phát, chứ không phải khi phát xong. Muốn phát tuần tự
+ * cả bài hội thoại thì phải đợi sự kiện "ended", nếu không mỗi câu chỉ kịp kêu
+ * được một tiếng rồi bị câu sau cắt ngang.
+ *
+ * Luôn resolve (kể cả khi bị stopAudio() cắt ngang hoặc file lỗi) để vòng lặp
+ * gọi nó không bao giờ bị treo.
+ */
+export async function playAudioUntilEnd(opts: PlayOptions): Promise<void> {
+  const { src, text, rate = 1, lang = "en-US" } = opts;
+  stopAudio();
+
+  if (src) {
+    const el = new Audio(withBase(`/audio/${src}`));
+    el.playbackRate = rate;
+    current = el;
+
+    try {
+      await el.play();
+      await new Promise<void>((resolve) => {
+        const finish = () => resolve();
+        el.addEventListener("ended", finish, { once: true });
+        // "pause" bắn ra khi bị stopAudio() dừng giữa chừng.
+        el.addEventListener("pause", finish, { once: true });
+        el.addEventListener("error", finish, { once: true });
+      });
+      return;
+    } catch {
+      if (current === el) current = null;
+      // Rơi xuống dùng giọng đọc máy bên dưới.
+    }
+  }
+
+  await speakUntilEnd(text, { rate, lang });
+}
+
+/** Đọc bằng giọng máy và chờ đọc xong. */
+function speakUntilEnd(
+  text: string,
+  opts: { rate?: number; lang?: string },
+): Promise<void> {
+  return new Promise((resolve) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      resolve();
+      return;
+    }
+
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = opts.lang ?? "en-US";
+    u.rate = opts.rate ?? 1;
+    u.onend = () => resolve();
+    // cancel() cũng làm bắn onerror -> vẫn phải resolve để không treo.
+    u.onerror = () => resolve();
+    window.speechSynthesis.speak(u);
+  });
+}
+
 /** Phát bản đọc chậm của một lời thoại: ưu tiên file "-slow", không có thì giảm tốc độ. */
 export async function playSlow(opts: PlayOptions): Promise<boolean> {
   const slowSrc = opts.src ? opts.src.replace(/\.mp3$/, "-slow.mp3") : undefined;

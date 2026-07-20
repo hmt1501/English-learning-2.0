@@ -8,9 +8,11 @@
  */
 import { get, set } from "idb-keyval";
 import type { WordStats } from "./stats";
+import type { SessionCheckpoint, SessionStore } from "./session";
 
 const KEY_WORD_STATS = "wordStats";
 const KEY_ACTIVITY_LOG = "activityLog";
+const KEY_SESSIONS = "sessions";
 
 export type ActivityLogType =
   | "vocab"
@@ -45,6 +47,34 @@ export async function loadActivityLog(): Promise<ActivityLogEntry[]> {
 
 export async function saveActivityLog(log: ActivityLogEntry[]): Promise<void> {
   await set(KEY_ACTIVITY_LOG, log);
+}
+
+// --------------------------------------------- buổi học đang làm dở ------
+
+export async function loadSessions(): Promise<SessionStore> {
+  return (await get<SessionStore>(KEY_SESSIONS)) ?? {};
+}
+
+export async function saveSessions(sessions: SessionStore): Promise<void> {
+  await set(KEY_SESSIONS, sessions);
+}
+
+/** Ghi checkpoint của một buổi. Gọi sau MỖI câu để thoát ra vẫn giữ được. */
+export async function saveSession(
+  key: string,
+  checkpoint: SessionCheckpoint,
+): Promise<void> {
+  const all = await loadSessions();
+  all[key] = checkpoint;
+  await saveSessions(all);
+}
+
+/** Xoá checkpoint khi buổi học đã hoàn tất. */
+export async function clearSession(key: string): Promise<void> {
+  const all = await loadSessions();
+  if (!(key in all)) return;
+  delete all[key];
+  await saveSessions(all);
 }
 
 /** Ghi thêm một dòng nhật ký. Đọc–sửa–ghi nên chỉ gọi từ event handler. */

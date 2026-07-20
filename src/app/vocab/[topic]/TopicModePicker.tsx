@@ -4,7 +4,9 @@ import Link from "next/link";
 import { getDeck, getTopic } from "@/lib/content";
 import { MODE_LIST } from "@/lib/modes";
 import { topicProgress } from "@/lib/stats";
+import { progressLabel, sessionKey } from "@/lib/session";
 import { useWordStats } from "@/lib/useStats";
+import { useSessions } from "@/lib/useSessions";
 import { useMounted } from "@/lib/useMounted";
 import { useAppStore } from "@/lib/store";
 import { Card, Page, PageHeader, ProgressBar } from "@/components/ui";
@@ -13,6 +15,7 @@ import { Card, Page, PageHeader, ProgressBar } from "@/components/ui";
 export function TopicModePicker({ topicId }: { topicId: string }) {
   const mounted = useMounted();
   const { stats, ready } = useWordStats();
+  const { sessions } = useSessions();
   const wordsPerSession = useAppStore((s) => s.wordsPerSession);
 
   const topic = getTopic(topicId);
@@ -36,6 +39,11 @@ export function TopicModePicker({ topicId }: { topicId: string }) {
                 ? topicProgress(stats, mode.id, ids)
                 : { mastered: 0, total: ids.length, ratio: 0 };
 
+            // Buổi đang làm dở của đúng cách học này
+            const doing = mounted
+              ? progressLabel(sessions[sessionKey(topicId, mode.id)])
+              : null;
+
             return (
               <Link key={mode.id} href={`/vocab/${topicId}/${mode.id}/`}>
                 <Card className="transition active:scale-[0.99]">
@@ -46,6 +54,13 @@ export function TopicModePicker({ topicId }: { topicId: string }) {
                       <p className="mt-0.5 text-sm text-muted">{mode.descVi}</p>
                     </div>
                   </div>
+
+                  {doing && (
+                    <p className="mt-3 rounded-xl bg-muted-bg px-3 py-2 text-sm">
+                      ↩️ Đang học dở {doing} câu — bấm để học tiếp
+                    </p>
+                  )}
+
                   <div className="mt-3">
                     <ProgressBar ratio={p.ratio} label={`${p.mastered}/${p.total}`} />
                   </div>

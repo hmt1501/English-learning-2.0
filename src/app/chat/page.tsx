@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   AiError,
+  FREE_CHAT_ID,
   ROLEPLAYS,
   sendChat,
   type ChatTurn,
@@ -122,9 +123,30 @@ export default function ChatPage() {
             </Card>
           )}
 
-          <h2 className="mb-2 font-semibold">Chọn tình huống</h2>
+          {/* Chat tự do tách riêng một nhóm: không có bối cảnh, nói gì cũng được */}
+          <h2 className="mb-2 font-semibold">Nói chuyện thoải mái</h2>
+          <div className="mb-5 flex flex-col gap-2">
+            {ROLEPLAYS.filter((r) => r.id === FREE_CHAT_ID).map((r) => (
+              <button key={r.id} type="button" onClick={() => start(r)} className="text-left">
+                <Card className="border-primary transition active:scale-[0.99]">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl leading-none">{r.emoji}</span>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-semibold">{r.titleVi}</p>
+                      <p className="text-sm text-muted">
+                        Không theo tình huống nào — bạn muốn nói chuyện gì cũng được.
+                      </p>
+                    </div>
+                    <span className="text-muted">›</span>
+                  </div>
+                </Card>
+              </button>
+            ))}
+          </div>
+
+          <h2 className="mb-2 font-semibold">Hoặc luyện theo tình huống</h2>
           <div className="flex flex-col gap-2">
-            {ROLEPLAYS.map((r) => (
+            {ROLEPLAYS.filter((r) => r.id !== FREE_CHAT_ID).map((r) => (
               <button key={r.id} type="button" onClick={() => start(r)} className="text-left">
                 <Card className="transition active:scale-[0.99]">
                   <div className="flex items-center gap-3">

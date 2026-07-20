@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { getDialogue } from "@/lib/content";
-import { playAudio, stopAudio } from "@/lib/audio";
+import { playAudio, playAudioUntilEnd, stopAudio } from "@/lib/audio";
 import { useCompleteActivity } from "@/lib/useDaily";
 import { Button, Card, Page, PageHeader, PlayButton } from "@/components/ui";
 
@@ -20,25 +20,61 @@ export function ListenPlayer({ id }: { id: string }) {
     dialogue ? dialogue.questions.map(() => null) : [],
   );
   const [playingLine, setPlayingLine] = useState<string | null>(null);
+  const [playingAll, setPlayingAll] = useState(false);
   const [finished, setFinished] = useState(false);
 
+  /**
+   * Lời thoại ẩn mặc định: nghe trước đã, cần thì mới mở ra đối chiếu.
+   * Nghe mà nhìn chữ ngay thì thành bài đọc mất.
+   */
+  const [showScript, setShowScript] = useState(false);
+
+  /** Cờ dừng cho vòng phát cả bài — chỉ đọc trong handler, không đọc lúc render. */
+  const cancelRef = useRef(false);
+
   // Rời trang thì tắt tiếng, tránh audio chạy nền.
-  useEffect(() => () => stopAudio(), []);
+  useEffect(
+    () => () => {
+      cancelRef.current = true;
+      stopAudio();
+    },
+    [],
+  );
 
   const playLine = useCallback((lineId: string, src: string, text: string) => {
+    cancelRef.current = true; // dừng vòng phát cả bài nếu đang chạy
+    setPlayingAll(false);
     setPlayingLine(lineId);
     void playAudio({ src, text });
   }, []);
 
-  /** Phát lần lượt cả bài. */
+  const stopAll = useCallback(() => {
+    cancelRef.current = true;
+    stopAudio();
+    setPlayingAll(false);
+    setPlayingLine(null);
+  }, []);
+
+  /**
+   * Phát lần lượt cả bài — CHỜ từng câu phát xong mới sang câu sau.
+   * (playAudio() thường resolve ngay khi bắt đầu phát, không dùng được ở đây.)
+   */
   const playAll = useCallback(async () => {
     if (!dialogue) return;
+
+    cancelRef.current = false;
+    setPlayingAll(true);
+
     for (const line of dialogue.lines) {
+      if (cancelRef.current) break;
       setPlayingLine(line.id);
-      await playAudio({ src: line.audio, text: line.en });
-      // Chờ một nhịp ngắn giữa các câu cho dễ nghe.
-      await new Promise((r) => setTimeout(r, 400));
+      await playAudioUntilEnd({ src: line.audio, text: line.en });
+      if (cancelRef.current) break;
+      // Nghỉ một nhịp ngắn giữa hai lượt nói cho dễ theo.
+      await new Promise((r) => setTimeout(r, 350));
     }
+
+    setPlayingAll(false);
     setPlayingLine(null);
   }, [dialogue]);
 
@@ -53,15 +89,15 @@ export function ListenPlayer({ id }: { id: string }) {
 
   const finish = useCallback(async () => {
     if (!dialogue) return;
+    stopAll();
     setFinished(true);
-    stopAudio();
     await complete({
       activityId: `listen:${dialogue.id}`,
       type: "listen",
       refId: dialogue.id,
       count: dialogue.questions.length,
     });
-  }, [dialogue, complete]);
+  }, [dialogue, complete, stopAll]);
 
   if (!dialogue) return null;
 
@@ -71,28 +107,60 @@ export function ListenPlayer({ id }: { id: string }) {
       <Page>
         <Card className="mb-4">
           <p className="text-sm text-muted">{dialogue.summaryVi}</p>
-          <div className="mt-3">
-            <PlayButton onPlay={() => void playAll()} label="Phát cả bài" emoji="▶️" />
+          <div className="mt-3 flex flex-wrap gap-2">
+            {!playingAll ? (
+              <PlayButton onPlay={() => void playAll()} label="Phát cả bài" emoji="▶️" />
+            ) : (
+              <PlayButton onPlay={stopAll} label="Dừng" emoji="⏹️" />
+            )}
+            <PlayButton
+              onPlay={() => setShowScript((v) => !v)}
+              label={showScript ? "Ẩn lời thoại" : "Hiện lời thoại"}
+              emoji={showScript ? "🙈" : "👀"}
+            />
           </div>
         </Card>
 
-        {/* Lời thoại hiện ngay từ đầu — đây là bài luyện nghe hiểu, không phải bài thi */}
         <h2 className="mb-2 font-semibold">Lời thoại</h2>
+
+        {!showScript && (
+          <p className="mb-3 rounded-2xl border border-dashed border-border p-4 text-center text-sm text-muted">
+            Lời thoại đang ẩn. Nghe trước rồi bấm{" "}
+            <span className="font-medium">Hiện lời thoại</span> để đối chiếu nhé.
+          </p>
+        )}
+
         <div className="mb-6 flex flex-col gap-2">
-          {dialogue.lines.map((line) => (
+          {dialogue.lines.map((line, i) => (
             <Card
               key={line.id}
               className={playingLine === line.id ? "border-primary" : ""}
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs font-medium text-primary">{line.speaker}</p>
-                  <p className="mt-0.5">{line.en}</p>
-                  <p className="mt-1 text-sm text-muted">{line.vi}</p>
+                  <p className="text-xs font-medium text-primary">
+                    {line.speaker}
+                    {!showScript && (
+                      <span className="ml-1 font-normal text-muted">· câu {i + 1}</span>
+                    )}
+                  </p>
+
+                  {/* Ẩn phần chữ nhưng vẫn giữ nút nghe từng câu */}
+                  {showScript ? (
+                    <>
+                      <p className="mt-0.5">{line.en}</p>
+                      <p className="mt-1 text-sm text-muted">{line.vi}</p>
+                    </>
+                  ) : (
+                    <p className="mt-1 select-none text-muted" aria-hidden>
+                      ● ● ● ● ●
+                    </p>
+                  )}
                 </div>
+
                 <button
                   type="button"
-                  aria-label={`Nghe câu của ${line.speaker}`}
+                  aria-label={`Nghe câu ${i + 1} của ${line.speaker}`}
                   onClick={() => playLine(line.id, line.audio, line.en)}
                   className="shrink-0 rounded-full border border-border px-2.5 py-1.5 text-sm active:scale-95"
                 >

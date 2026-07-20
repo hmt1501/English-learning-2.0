@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { topics, getDeck } from "@/lib/content";
 import { topicProgress } from "@/lib/stats";
+import { progressLabel, sessionKey } from "@/lib/session";
 import { useWordStats } from "@/lib/useStats";
+import { useSessions } from "@/lib/useSessions";
 import { useMounted } from "@/lib/useMounted";
 import { Card, Page, PageHeader, ProgressBar } from "@/components/ui";
 import { MODE_LIST } from "@/lib/modes";
@@ -11,6 +13,7 @@ import { MODE_LIST } from "@/lib/modes";
 export default function VocabTopicsPage() {
   const mounted = useMounted();
   const { stats, ready } = useWordStats();
+  const { sessions } = useSessions();
 
   return (
     <>
@@ -40,6 +43,10 @@ export default function VocabTopicsPage() {
                         mounted && ready
                           ? topicProgress(stats, mode.id, ids)
                           : { mastered: 0, total: ids.length, ratio: 0 };
+                      const doing = mounted
+                        ? progressLabel(sessions[sessionKey(topic.id, mode.id)])
+                        : null;
+
                       return (
                         <div key={mode.id} className="flex items-center gap-2">
                           <span className="w-24 shrink-0 text-xs text-muted">
@@ -51,6 +58,10 @@ export default function VocabTopicsPage() {
                               label={`${p.mastered}/${p.total}`}
                             />
                           </div>
+                          {/* Buổi đang dở hiện ngay, không đợi học hết mới thấy */}
+                          <span className="w-12 shrink-0 text-right text-xs text-accent">
+                            {doing ? `↩️${doing}` : ""}
+                          </span>
                         </div>
                       );
                     })}
