@@ -1,0 +1,152 @@
+[
+  {
+    "id": "feedback-01",
+    "chunk": "great job on this",
+    "meaningVi": "bạn làm việc này rất tốt",
+    "example": "Great job on this presentation, the slides were very clear.",
+    "exampleVi": "Bạn làm bài thuyết trình này rất tốt, các slide rất rõ ràng.",
+    "cue": "Khi khen ngợi kết quả công việc của đồng nghiệp",
+    "cloze": "___ presentation, the slides were very clear.",
+    "audio": "vocab/feedback-01.mp3"
+  },
+  {
+    "id": "feedback-02",
+    "chunk": "i really appreciate your effort",
+    "meaningVi": "tôi rất trân trọng nỗ lực của bạn",
+    "example": "I really appreciate your effort on this difficult project.",
+    "exampleVi": "Tôi rất trân trọng nỗ lực của bạn trong dự án khó khăn này.",
+    "cue": "Khi ghi nhận sự cố gắng của thành viên trong nhóm",
+    "cloze": "___ on this difficult project.",
+    "audio": "vocab/feedback-02.mp3"
+  },
+  {
+    "id": "feedback-03",
+    "chunk": "may i give you some feedback",
+    "meaningVi": "tôi góp ý cho bạn một chút được không",
+    "example": "May I give you some feedback on your email style?",
+    "exampleVi": "Tôi góp ý cho bạn một chút về cách viết email được không?",
+    "cue": "Khi xin phép trước khi đưa ra góp ý",
+    "cloze": "___ on your email style?",
+    "audio": "vocab/feedback-03.mp3"
+  },
+  {
+    "id": "feedback-04",
+    "chunk": "one thing to improve",
+    "meaningVi": "một điểm cần cải thiện",
+    "example": "One thing to improve is the length of your reports.",
+    "exampleVi": "Một điểm cần cải thiện là độ dài của các báo cáo của bạn.",
+    "cue": "Khi chỉ ra điểm cần chỉnh sửa một cách nhẹ nhàng",
+    "cloze": "___ is the length of your reports.",
+    "audio": "vocab/feedback-04.mp3"
+  },
+  {
+    "id": "feedback-05",
+    "chunk": "thanks for the feedback",
+    "meaningVi": "cảm ơn bạn đã góp ý",
+    "example": "Thanks for the feedback, I will make the changes today.",
+    "exampleVi": "Cảm ơn bạn đã góp ý, tôi sẽ chỉnh sửa hôm nay.",
+    "cue": "Khi bạn tiếp nhận góp ý từ người khác",
+    "cloze": "___, I will make the changes today.",
+    "audio": "vocab/feedback-05.mp3"
+  },
+  {
+    "id": "feedback-06",
+    "chunk": "that's a good point",
+    "meaningVi": "đó là một ý hay",
+    "example": "That's a good point, I had not thought about the cost.",
+    "exampleVi": "Đó là một ý hay, tôi chưa nghĩ đến chi phí.",
+    "cue": "Khi đồng tình với ý kiến của người khác trong họp",
+    "cloze": "___, I had not thought about the cost.",
+    "audio": "vocab/feedback-06.mp3"
+  },
+  {
+    "id": "feedback-07",
+    "chunk": "you've made good progress",
+    "meaningVi": "bạn đã tiến bộ nhiều",
+    "example": "You've made good progress since our last review.",
+    "exampleVi": "Bạn đã tiến bộ nhiều kể từ lần đánh giá trước của chúng ta.",
+    "cue": "Khi đánh giá sự tiến bộ của nhân viên",
+    "cloze": "___ since our last review.",
+    "audio": "vocab/feedback-07.mp3"
+  },
+  {
+    "id": "feedback-08",
+    "chunk": "i see what you mean",
+    "meaningVi": "tôi hiểu ý bạn rồi",
+    "example": "I see what you mean, so let's try your idea first.",
+    "exampleVi": "Tôi hiểu ý bạn rồi, vậy hãy thử ý tưởng của bạn trước.",
+    "cue": "Khi thể hiện bạn đã hiểu quan điểm của người góp ý",
+    "cloze": "___, so let's try your idea first.",
+    "audio": "vocab/feedback-08.mp3"
+  },
+  {
+    "id": "feedback-09",
+    "chunk": "keep up the good work",
+    "meaningVi": "hãy tiếp tục phát huy nhé",
+    "example": "Your numbers are excellent this month, keep up the good work!",
+    "exampleVi": "Số liệu của bạn tháng này rất tốt, hãy tiếp tục phát huy nhé!",
+    "cue": "Khi động viên đồng nghiệp tiếp tục làm tốt",
+    "cloze": "Your numbers are excellent this month, ___!",
+    "audio": "vocab/feedback-09.mp3"
+  },
+  {
+    "id": "feedback-10",
+    "chunk": "next time you could try",
+    "meaningVi": "lần sau bạn có thể thử",
+    "example": "Next time you could try sending the agenda one day earlier.",
+    "exampleVi": "Lần sau bạn có thể thử gửi chương trình họp sớm hơn một ngày.",
+    "cue": "Khi gợi ý cách làm tốt hơn cho lần sau",
+    "cloze": "___ sending the agenda one day earlier.",
+    "audio": "vocab/feedback-10.mp3"
+  },
+  {
+    "id": "feedback-11",
+    "chunk": "i'm not sure i agree",
+    "meaningVi": "tôi không chắc là tôi đồng ý",
+    "example": "I'm not sure I agree, but I would like to hear more.",
+    "exampleVi": "Tôi không chắc là tôi đồng ý, nhưng tôi muốn nghe thêm.",
+    "cue": "Khi phản đối một cách lịch sự trong cuộc họp",
+    "cloze": "___, but I would like to hear more.",
+    "audio": "vocab/feedback-11.mp3"
+  },
+  {
+    "id": "feedback-12",
+    "chunk": "well done, everyone",
+    "meaningVi": "mọi người làm tốt lắm",
+    "example": "Well done, everyone. We finished the project on time.",
+    "exampleVi": "Mọi người làm tốt lắm. Chúng ta đã hoàn thành dự án đúng hạn.",
+    "cue": "Khi khen cả nhóm sau khi hoàn thành công việc",
+    "cloze": "___. We finished the project on time.",
+    "audio": "vocab/feedback-12.mp3"
+  },
+  {
+    "id": "feedback-13",
+    "chunk": "could you explain a bit more",
+    "meaningVi": "bạn giải thích rõ hơn được không",
+    "example": "Could you explain a bit more about what I should change?",
+    "exampleVi": "Bạn giải thích rõ hơn về điều tôi nên thay đổi được không?",
+    "cue": "Khi bạn cần làm rõ góp ý mà mình vừa nhận",
+    "cloze": "___ about what I should change?",
+    "audio": "vocab/feedback-13.mp3"
+  },
+  {
+    "id": "feedback-14",
+    "chunk": "i'll take that on board",
+    "meaningVi": "tôi sẽ ghi nhận điều đó",
+    "example": "That is fair, and I'll take that on board next quarter.",
+    "exampleVi": "Điều đó hợp lý, và tôi sẽ ghi nhận điều đó cho quý sau.",
+    "cue": "Khi cho thấy bạn sẽ áp dụng góp ý nhận được",
+    "cloze": "That is fair, and ___ next quarter.",
+    "audio": "vocab/feedback-14.mp3"
+  },
+  {
+    "id": "feedback-15",
+    "chunk": "your work has really improved",
+    "meaningVi": "công việc của bạn đã cải thiện rõ rệt",
+    "example": "Your work has really improved over the last three months.",
+    "exampleVi": "Công việc của bạn đã cải thiện rõ rệt trong ba tháng qua.",
+    "cue": "Khi đánh giá tích cực trong buổi review định kỳ",
+    "cloze": "___ over the last three months.",
+    "audio": "vocab/feedback-15.mp3"
+  }
+]

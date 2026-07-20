@@ -1,0 +1,51 @@
+{
+  "id": "sc-file-request",
+  "titleVi": "Đồng nghiệp xin file báo cáo",
+  "topic": "requests",
+  "situationVi": "Một đồng nghiệp cần file báo cáo tháng để chuẩn bị cho cuộc họp chiều nay. File đã có nhưng bạn cần kiểm tra lại số liệu trước khi gửi.",
+  "thread": [
+    {
+      "from": "Minh (Accounting)",
+      "text": "Hi! Do you have the monthly sales report? I need it for the meeting this afternoon."
+    },
+    {
+      "from": "Minh (Accounting)",
+      "text": "Excel or PDF is fine. Whatever is easier for you."
+    }
+  ],
+  "hints": [
+    "Xác nhận là bạn có file đó.",
+    "Cho biết khi nào bạn sẽ gửi và lý do cần một chút thời gian (kiểm tra số liệu).",
+    "Hỏi lại nếu cần thêm thông tin, hoặc mời họ báo nếu cần gì thêm."
+  ],
+  "modelAnswers": [
+    "Hi Minh, yes I have it. Let me check the numbers first, then I'll send it to you before lunch. Let me know if you need anything else.",
+    "Hi Minh, thanks for asking. Yes, I have the monthly sales report. I just want to double-check the numbers, so I will send you the Excel file before lunch. That should give you enough time before the meeting. Let me know if you need anything else."
+  ],
+  "rubricVi": [
+    "Có trả lời rõ là có hay không có file không?",
+    "Có nói thời gian cụ thể sẽ gửi không?",
+    "Có giải thích ngắn gọn vì sao chưa gửi ngay không?",
+    "Câu trả lời có lịch sự và thân thiện không?"
+  ],
+  "srsCards": [
+    {
+      "id": "sc-file-request-s1",
+      "chunk": "Let me check the numbers first",
+      "meaningVi": "Để tôi kiểm tra lại số liệu trước đã",
+      "audio": "vocab/sc-file-request-s1.mp3"
+    },
+    {
+      "id": "sc-file-request-s2",
+      "chunk": "I'll send it to you before lunch",
+      "meaningVi": "Tôi sẽ gửi cho bạn trước giờ ăn trưa",
+      "audio": "vocab/sc-file-request-s2.mp3"
+    },
+    {
+      "id": "sc-file-request-s3",
+      "chunk": "Let me know if you need anything else",
+      "meaningVi": "Cứ báo tôi nếu bạn cần thêm gì nhé",
+      "audio": "vocab/sc-file-request-s3.mp3"
+    }
+  ]
+}

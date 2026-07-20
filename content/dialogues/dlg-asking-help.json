@@ -1,0 +1,138 @@
+{
+  "id": "dlg-asking-help",
+  "titleVi": "Nhờ đồng nghiệp giúp đỡ",
+  "topic": "requests",
+  "summaryVi": "Mai nhờ Tuan giúp làm slide thuyết trình và hai người thống nhất cách chia việc.",
+  "lines": [
+    {
+      "id": "dlg-asking-help-l01",
+      "speaker": "Mai",
+      "en": "Tuan, are you busy right now?",
+      "vi": "Anh Tuấn ơi, bây giờ anh có bận không?",
+      "audio": "dialogues/dlg-asking-help-l01.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l02",
+      "speaker": "Tuan",
+      "en": "Not really. I just finished my emails. What do you need?",
+      "vi": "Cũng không bận lắm. Anh vừa xong đống email. Em cần gì?",
+      "audio": "dialogues/dlg-asking-help-l02.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l03",
+      "speaker": "Mai",
+      "en": "Could you help me with the presentation slides for Thursday?",
+      "vi": "Anh có thể giúp em làm slide thuyết trình cho thứ Năm không?",
+      "audio": "dialogues/dlg-asking-help-l03.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l04",
+      "speaker": "Tuan",
+      "en": "Sure. How many slides do you have now?",
+      "vi": "Được chứ. Bây giờ em có bao nhiêu slide rồi?",
+      "audio": "dialogues/dlg-asking-help-l04.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l05",
+      "speaker": "Mai",
+      "en": "I have twelve, but I need about twenty. The charts are the hard part.",
+      "vi": "Em có mười hai slide, nhưng em cần khoảng hai mươi. Phần biểu đồ là khó nhất.",
+      "audio": "dialogues/dlg-asking-help-l05.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l06",
+      "speaker": "Tuan",
+      "en": "I can make the charts. I do that a lot for my team.",
+      "vi": "Anh có thể làm biểu đồ. Anh làm việc đó nhiều cho nhóm anh.",
+      "audio": "dialogues/dlg-asking-help-l06.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l07",
+      "speaker": "Mai",
+      "en": "That would be a big help. Do you need the data file?",
+      "vi": "Vậy thì giúp em rất nhiều. Anh có cần tệp dữ liệu không?",
+      "audio": "dialogues/dlg-asking-help-l07.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l08",
+      "speaker": "Tuan",
+      "en": "Yes, please send it to me by email. And tell me which numbers are most important.",
+      "vi": "Có, em gửi qua email cho anh nhé. Và cho anh biết những số liệu nào quan trọng nhất.",
+      "audio": "dialogues/dlg-asking-help-l08.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l09",
+      "speaker": "Mai",
+      "en": "Okay. When can you finish them?",
+      "vi": "Vâng ạ. Khi nào anh làm xong được?",
+      "audio": "dialogues/dlg-asking-help-l09.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l10",
+      "speaker": "Tuan",
+      "en": "By tomorrow afternoon. Is that early enough for you?",
+      "vi": "Trước chiều mai. Vậy có đủ sớm cho em không?",
+      "audio": "dialogues/dlg-asking-help-l10.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l11",
+      "speaker": "Mai",
+      "en": "Yes, perfect. Then I can practice on Wednesday.",
+      "vi": "Vâng, hoàn hảo ạ. Vậy em có thể luyện tập vào thứ Tư.",
+      "audio": "dialogues/dlg-asking-help-l11.mp3"
+    },
+    {
+      "id": "dlg-asking-help-l12",
+      "speaker": "Tuan",
+      "en": "Good luck. Just let me know if you need anything else.",
+      "vi": "Chúc em may mắn. Cứ báo anh nếu em cần gì thêm.",
+      "audio": "dialogues/dlg-asking-help-l12.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dlg-asking-help-q1",
+      "questionVi": "Mai nhờ Tuan giúp việc gì?",
+      "options": [
+        "Viết email cho khách hàng",
+        "Làm slide thuyết trình cho thứ Năm",
+        "Đặt phòng họp"
+      ],
+      "answerIndex": 1,
+      "explainVi": "Mai hỏi Tuấn có thể giúp cô ấy làm slide thuyết trình cho thứ Năm không."
+    },
+    {
+      "id": "dlg-asking-help-q2",
+      "questionVi": "Mai cần thêm bao nhiêu slide nữa?",
+      "options": [
+        "Khoảng tám slide",
+        "Khoảng hai slide",
+        "Khoảng hai mươi slide"
+      ],
+      "answerIndex": 0,
+      "explainVi": "Mai có mười hai slide và cần khoảng hai mươi, nên cô ấy cần thêm khoảng tám slide."
+    },
+    {
+      "id": "dlg-asking-help-q3",
+      "questionVi": "Tuan yêu cầu Mai gửi gì cho anh ấy?",
+      "options": [
+        "Bản in của slide",
+        "Lịch họp",
+        "Tệp dữ liệu qua email"
+      ],
+      "answerIndex": 2,
+      "explainVi": "Tuấn nói Mai hãy gửi tệp dữ liệu cho anh ấy qua email."
+    },
+    {
+      "id": "dlg-asking-help-q4",
+      "questionVi": "Khi nào Tuan sẽ làm xong biểu đồ?",
+      "options": [
+        "Trước chiều mai",
+        "Vào thứ Năm",
+        "Ngay bây giờ"
+      ],
+      "answerIndex": 0,
+      "explainVi": "Tuấn nói anh ấy sẽ làm xong trước chiều mai."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "sc-praise-teammate",
+  "titleVi": "Khen ngợi đồng nghiệp sau dự án",
+  "topic": "feedback",
+  "situationVi": "Dự án vừa kết thúc thành công nhờ đồng nghiệp của bạn làm việc rất chăm chỉ. Quản lý hỏi ý kiến của bạn về nhóm.",
+  "thread": [
+    {
+      "from": "Manager Sarah",
+      "text": "Great job everyone on the project! I'd love to hear your thoughts."
+    },
+    {
+      "from": "Manager Sarah",
+      "text": "Was there anyone who really helped the team this time?"
+    }
+  ],
+  "hints": [
+    "Nêu tên đồng nghiệp bạn muốn khen.",
+    "Đưa ra một ví dụ cụ thể về việc người đó đã làm.",
+    "Nói kết quả tích cực mà việc đó mang lại cho nhóm."
+  ],
+  "modelAnswers": [
+    "Thanks Sarah! I want to say a big thank you to Hoa. She stayed late to finish the report and helped me a lot with the data. Without her, we could not finish on time.",
+    "Thank you, Sarah. I would like to give special credit to Hoa. She stayed late to finish the report, and she also helped me a lot with the data when I was behind schedule. Because of her support, we finished the project on time and the client was very happy. She really deserves the recognition."
+  ],
+  "rubricVi": [
+    "Có nêu tên người cụ thể không?",
+    "Có ví dụ rõ ràng về việc người đó đã làm không?",
+    "Có nói kết quả tích cực cho nhóm hoặc khách hàng không?",
+    "Giọng điệu có chân thành, không quá chung chung không?"
+  ],
+  "srsCards": [
+    {
+      "id": "sc-praise-teammate-s1",
+      "chunk": "I would like to give special credit to Hoa",
+      "meaningVi": "Tôi muốn dành lời khen đặc biệt cho Hoa",
+      "audio": "vocab/sc-praise-teammate-s1.mp3"
+    },
+    {
+      "id": "sc-praise-teammate-s2",
+      "chunk": "She stayed late to finish the report",
+      "meaningVi": "Cô ấy đã ở lại muộn để hoàn thành báo cáo",
+      "audio": "vocab/sc-praise-teammate-s2.mp3"
+    },
+    {
+      "id": "sc-praise-teammate-s3",
+      "chunk": "She really deserves the recognition",
+      "meaningVi": "Cô ấy thực sự xứng đáng được ghi nhận",
+      "audio": "vocab/sc-praise-teammate-s3.mp3"
+    }
+  ]
+}

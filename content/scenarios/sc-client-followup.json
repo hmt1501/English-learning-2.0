@@ -1,0 +1,51 @@
+{
+  "id": "sc-client-followup",
+  "titleVi": "Email nhắc khách hàng phản hồi báo giá",
+  "topic": "email",
+  "situationVi": "Bạn đã gửi báo giá cho khách hàng một tuần trước nhưng chưa nhận được trả lời. Khách hàng vừa gửi email hỏi thăm tình hình dự án.",
+  "thread": [
+    {
+      "from": "Client Anna",
+      "text": "Hi, sorry for the slow reply. We have been very busy this month."
+    },
+    {
+      "from": "Client Anna",
+      "text": "Could you remind me what the next step is? I think you sent something last week."
+    }
+  ],
+  "hints": [
+    "Cảm ơn khách hàng đã phản hồi và tỏ ra thông cảm.",
+    "Nhắc lại ngắn gọn nội dung bạn đã gửi (báo giá) và bước tiếp theo.",
+    "Đề nghị một hành động cụ thể, ví dụ xác nhận báo giá hoặc gọi điện trao đổi."
+  ],
+  "modelAnswers": [
+    "Hi Anna, no problem at all. I sent you the quotation last week. The next step is your confirmation, then we can start the work. Would you like me to send it again?",
+    "Hi Anna, thank you for getting back to me, and no problem at all. Last week I sent you the quotation for the project. The next step is your confirmation, then we can start the work in about two weeks. I am happy to resend the document or have a short call this week if that is easier for you."
+  ],
+  "rubricVi": [
+    "Có phản hồi lịch sự, không tạo áp lực cho khách hàng không?",
+    "Có tóm tắt lại rõ ràng nội dung đã gửi không?",
+    "Có nêu bước tiếp theo cụ thể không?",
+    "Có đưa ra một đề nghị giúp đỡ không?"
+  ],
+  "srsCards": [
+    {
+      "id": "sc-client-followup-s1",
+      "chunk": "thank you for getting back to me",
+      "meaningVi": "cảm ơn chị đã phản hồi lại tôi",
+      "audio": "vocab/sc-client-followup-s1.mp3"
+    },
+    {
+      "id": "sc-client-followup-s2",
+      "chunk": "The next step is your confirmation",
+      "meaningVi": "Bước tiếp theo là chị xác nhận",
+      "audio": "vocab/sc-client-followup-s2.mp3"
+    },
+    {
+      "id": "sc-client-followup-s3",
+      "chunk": "I am happy to resend the document",
+      "meaningVi": "Tôi sẵn lòng gửi lại tài liệu",
+      "audio": "vocab/sc-client-followup-s3.mp3"
+    }
+  ]
+}

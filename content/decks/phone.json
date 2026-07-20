@@ -1,0 +1,152 @@
+[
+  {
+    "id": "phone-01",
+    "chunk": "may i speak to",
+    "meaningVi": "cho tôi gặp",
+    "example": "Hello, may I speak to Mr. Nam in the sales department?",
+    "exampleVi": "Xin chào, cho tôi gặp anh Nam ở phòng kinh doanh được không?",
+    "cue": "Khi bạn gọi điện và muốn gặp một người cụ thể",
+    "cloze": "Hello, ___ Mr. Nam in the sales department?",
+    "audio": "vocab/phone-01.mp3"
+  },
+  {
+    "id": "phone-02",
+    "chunk": "who's calling please",
+    "meaningVi": "xin hỏi ai đang gọi ạ",
+    "example": "Good morning, who's calling please?",
+    "exampleVi": "Chào buổi sáng, xin hỏi ai đang gọi ạ?",
+    "cue": "Khi bạn nhận điện thoại và cần biết tên người gọi",
+    "cloze": "Good morning, ___?",
+    "audio": "vocab/phone-02.mp3"
+  },
+  {
+    "id": "phone-03",
+    "chunk": "hold on a moment please",
+    "meaningVi": "xin vui lòng giữ máy một lát",
+    "example": "Hold on a moment please, I will check for you.",
+    "exampleVi": "Xin vui lòng giữ máy một lát, tôi sẽ kiểm tra giúp anh.",
+    "cue": "Khi bạn cần người gọi chờ trong giây lát",
+    "cloze": "___, I will check for you.",
+    "audio": "vocab/phone-03.mp3"
+  },
+  {
+    "id": "phone-04",
+    "chunk": "i'll put you through",
+    "meaningVi": "tôi sẽ nối máy cho anh/chị",
+    "example": "I'll put you through to the accounting team now.",
+    "exampleVi": "Tôi sẽ nối máy cho anh với phòng kế toán ngay bây giờ.",
+    "cue": "Khi bạn chuyển cuộc gọi sang bộ phận khác",
+    "cloze": "___ to the accounting team now.",
+    "audio": "vocab/phone-04.mp3"
+  },
+  {
+    "id": "phone-05",
+    "chunk": "can i take a message",
+    "meaningVi": "tôi ghi lại lời nhắn nhé",
+    "example": "She is not at her desk. Can I take a message?",
+    "exampleVi": "Chị ấy không có ở bàn làm việc. Tôi ghi lại lời nhắn nhé?",
+    "cue": "Khi người được gọi không có mặt",
+    "cloze": "She is not at her desk. ___?",
+    "audio": "vocab/phone-05.mp3"
+  },
+  {
+    "id": "phone-06",
+    "chunk": "could you call me back",
+    "meaningVi": "anh/chị gọi lại cho tôi được không",
+    "example": "I am busy right now, could you call me back at three?",
+    "exampleVi": "Bây giờ tôi đang bận, anh gọi lại cho tôi lúc ba giờ được không?",
+    "cue": "Khi bạn muốn hẹn gọi lại sau",
+    "cloze": "I am busy right now, ___ at three?",
+    "audio": "vocab/phone-06.mp3"
+  },
+  {
+    "id": "phone-07",
+    "chunk": "i can't hear you very well",
+    "meaningVi": "tôi nghe anh/chị không rõ lắm",
+    "example": "Sorry, I can't hear you very well, could you speak up?",
+    "exampleVi": "Xin lỗi, tôi nghe anh không rõ lắm, anh nói to hơn được không?",
+    "cue": "Khi tiếng nói của người kia quá nhỏ hoặc bị rè",
+    "cloze": "Sorry, ___, could you speak up?",
+    "audio": "vocab/phone-07.mp3"
+  },
+  {
+    "id": "phone-08",
+    "chunk": "you're breaking up",
+    "meaningVi": "tiếng của anh/chị bị ngắt quãng",
+    "example": "Sorry, you're breaking up. Let me call you again.",
+    "exampleVi": "Xin lỗi, tiếng của anh bị ngắt quãng. Để tôi gọi lại cho anh.",
+    "cue": "Khi tín hiệu kém làm giọng người kia đứt quãng",
+    "cloze": "Sorry, ___. Let me call you again.",
+    "audio": "vocab/phone-08.mp3"
+  },
+  {
+    "id": "phone-09",
+    "chunk": "my connection is unstable",
+    "meaningVi": "kết nối của tôi không ổn định",
+    "example": "My connection is unstable, so I will turn off my camera.",
+    "exampleVi": "Kết nối của tôi không ổn định, nên tôi sẽ tắt camera.",
+    "cue": "Khi mạng của bạn yếu trong buổi họp trực tuyến",
+    "cloze": "___, so I will turn off my camera.",
+    "audio": "vocab/phone-09.mp3"
+  },
+  {
+    "id": "phone-10",
+    "chunk": "you are on mute",
+    "meaningVi": "bạn đang tắt tiếng",
+    "example": "Lan, we cannot hear you. You are on mute.",
+    "exampleVi": "Lan, chúng tôi không nghe thấy em. Em đang tắt tiếng.",
+    "cue": "Khi ai đó nói mà micro vẫn đang tắt",
+    "cloze": "Lan, we cannot hear you. ___.",
+    "audio": "vocab/phone-10.mp3"
+  },
+  {
+    "id": "phone-11",
+    "chunk": "can you share your screen",
+    "meaningVi": "bạn chia sẻ màn hình được không",
+    "example": "Can you share your screen so we can see the report?",
+    "exampleVi": "Anh chia sẻ màn hình được không để chúng tôi xem báo cáo?",
+    "cue": "Khi bạn cần người khác trình chiếu tài liệu online",
+    "cloze": "___ so we can see the report?",
+    "audio": "vocab/phone-11.mp3"
+  },
+  {
+    "id": "phone-12",
+    "chunk": "could you repeat that",
+    "meaningVi": "anh/chị nhắc lại được không",
+    "example": "Could you repeat that number one more time?",
+    "exampleVi": "Anh nhắc lại số đó thêm một lần nữa được không?",
+    "cue": "Khi bạn nghe không kịp thông tin quan trọng",
+    "cloze": "___ number one more time?",
+    "audio": "vocab/phone-12.mp3"
+  },
+  {
+    "id": "phone-13",
+    "chunk": "i'm calling about",
+    "meaningVi": "tôi gọi về việc",
+    "example": "I'm calling about the invoice we received last week.",
+    "exampleVi": "Tôi gọi về việc hóa đơn chúng tôi nhận được tuần trước.",
+    "cue": "Khi bạn nêu lý do cuộc gọi",
+    "cloze": "___ the invoice we received last week.",
+    "audio": "vocab/phone-13.mp3"
+  },
+  {
+    "id": "phone-14",
+    "chunk": "let me join the meeting again",
+    "meaningVi": "để tôi vào lại cuộc họp",
+    "example": "The audio is bad, let me join the meeting again.",
+    "exampleVi": "Âm thanh kém quá, để tôi vào lại cuộc họp.",
+    "cue": "Khi bạn cần thoát ra và vào lại phòng họp trực tuyến",
+    "cloze": "The audio is bad, ___.",
+    "audio": "vocab/phone-14.mp3"
+  },
+  {
+    "id": "phone-15",
+    "chunk": "thanks for calling",
+    "meaningVi": "cảm ơn anh/chị đã gọi",
+    "example": "Thanks for calling, have a nice day.",
+    "exampleVi": "Cảm ơn anh đã gọi, chúc anh một ngày tốt lành.",
+    "cue": "Khi bạn kết thúc cuộc gọi công việc",
+    "cloze": "___, have a nice day.",
+    "audio": "vocab/phone-15.mp3"
+  }
+]

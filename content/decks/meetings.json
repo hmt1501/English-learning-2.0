@@ -1,0 +1,152 @@
+[
+  {
+    "id": "meetings-01",
+    "chunk": "let's get started",
+    "meaningVi": "chúng ta bắt đầu nhé",
+    "example": "Everyone is here, so let's get started.",
+    "exampleVi": "Mọi người đã có mặt đủ, vậy chúng ta bắt đầu nhé.",
+    "cue": "Khi bạn mở đầu buổi họp",
+    "cloze": "Everyone is here, so ___.",
+    "audio": "vocab/meetings-01.mp3"
+  },
+  {
+    "id": "meetings-02",
+    "chunk": "the purpose of this meeting is",
+    "meaningVi": "mục đích của buổi họp này là",
+    "example": "The purpose of this meeting is to review the sales results.",
+    "exampleVi": "Mục đích của buổi họp này là xem lại kết quả kinh doanh.",
+    "cue": "Khi bạn nêu rõ lý do tổ chức cuộc họp",
+    "cloze": "___ to review the sales results.",
+    "audio": "vocab/meetings-02.mp3"
+  },
+  {
+    "id": "meetings-03",
+    "chunk": "sorry i'm late",
+    "meaningVi": "xin lỗi tôi đến muộn",
+    "example": "Sorry I'm late, the traffic was very bad this morning.",
+    "exampleVi": "Xin lỗi tôi đến muộn, sáng nay đường tắc lắm.",
+    "cue": "Khi bạn đến muộn buổi họp",
+    "cloze": "___, the traffic was very bad this morning.",
+    "audio": "vocab/meetings-03.mp3"
+  },
+  {
+    "id": "meetings-04",
+    "chunk": "may i say something",
+    "meaningVi": "cho tôi nói một chút được không",
+    "example": "Excuse me, may I say something about this point?",
+    "exampleVi": "Xin lỗi, cho tôi nói một chút về điểm này được không?",
+    "cue": "Khi bạn muốn xin phép phát biểu trong cuộc họp",
+    "cloze": "Excuse me, ___ about this point?",
+    "audio": "vocab/meetings-04.mp3"
+  },
+  {
+    "id": "meetings-05",
+    "chunk": "i totally agree with you",
+    "meaningVi": "tôi hoàn toàn đồng ý với bạn",
+    "example": "I totally agree with you, we need more time for testing.",
+    "exampleVi": "Tôi hoàn toàn đồng ý với anh, chúng ta cần thêm thời gian để kiểm thử.",
+    "cue": "Khi bạn ủng hộ mạnh ý kiến của đồng nghiệp",
+    "cloze": "___, we need more time for testing.",
+    "audio": "vocab/meetings-05.mp3"
+  },
+  {
+    "id": "meetings-06",
+    "chunk": "i see your point but",
+    "meaningVi": "tôi hiểu ý bạn nhưng",
+    "example": "I see your point but the cost is too high for us.",
+    "exampleVi": "Tôi hiểu ý anh nhưng chi phí quá cao đối với chúng ta.",
+    "cue": "Khi bạn muốn phản đối một cách lịch sự",
+    "cloze": "___ the cost is too high for us.",
+    "audio": "vocab/meetings-06.mp3"
+  },
+  {
+    "id": "meetings-07",
+    "chunk": "can you explain that again",
+    "meaningVi": "bạn giải thích lại được không",
+    "example": "Sorry, can you explain that again more slowly?",
+    "exampleVi": "Xin lỗi, anh giải thích lại chậm hơn được không?",
+    "cue": "Khi bạn chưa hiểu ý người trình bày",
+    "cloze": "Sorry, ___ more slowly?",
+    "audio": "vocab/meetings-07.mp3"
+  },
+  {
+    "id": "meetings-08",
+    "chunk": "move on to the next point",
+    "meaningVi": "chuyển sang mục tiếp theo",
+    "example": "We have covered the budget, so let's move on to the next point.",
+    "exampleVi": "Chúng ta đã bàn xong ngân sách, vậy chuyển sang mục tiếp theo nhé.",
+    "cue": "Khi bạn muốn chuyển chủ đề trong cuộc họp",
+    "cloze": "We have covered the budget, so let's ___.",
+    "audio": "vocab/meetings-08.mp3"
+  },
+  {
+    "id": "meetings-09",
+    "chunk": "what do you think about",
+    "meaningVi": "bạn nghĩ sao về",
+    "example": "Hoa, what do you think about this new schedule?",
+    "exampleVi": "Hoa, em nghĩ sao về lịch trình mới này?",
+    "cue": "Khi bạn muốn hỏi ý kiến một người trong họp",
+    "cloze": "Hoa, ___ this new schedule?",
+    "audio": "vocab/meetings-09.mp3"
+  },
+  {
+    "id": "meetings-10",
+    "chunk": "let's put that on hold",
+    "meaningVi": "tạm gác việc đó lại",
+    "example": "We have no data yet, so let's put that on hold.",
+    "exampleVi": "Chúng ta chưa có dữ liệu, nên tạm gác việc đó lại.",
+    "cue": "Khi một vấn đề chưa thể quyết định ngay",
+    "cloze": "We have no data yet, so ___.",
+    "audio": "vocab/meetings-10.mp3"
+  },
+  {
+    "id": "meetings-11",
+    "chunk": "to sum up",
+    "meaningVi": "tóm lại",
+    "example": "To sum up, we will start the project next Monday.",
+    "exampleVi": "Tóm lại, chúng ta sẽ bắt đầu dự án vào thứ Hai tuần sau.",
+    "cue": "Khi bạn tổng kết cuối buổi họp",
+    "cloze": "___, we will start the project next Monday.",
+    "audio": "vocab/meetings-11.mp3"
+  },
+  {
+    "id": "meetings-12",
+    "chunk": "who will take care of this",
+    "meaningVi": "ai sẽ lo việc này",
+    "example": "This task is urgent, so who will take care of this?",
+    "exampleVi": "Việc này gấp, vậy ai sẽ lo việc này?",
+    "cue": "Khi bạn cần giao việc cho ai đó trong họp",
+    "cloze": "This task is urgent, so ___?",
+    "audio": "vocab/meetings-12.mp3"
+  },
+  {
+    "id": "meetings-13",
+    "chunk": "let's set a deadline",
+    "meaningVi": "chúng ta đặt hạn chót nhé",
+    "example": "Let's set a deadline for the end of this month.",
+    "exampleVi": "Chúng ta đặt hạn chót vào cuối tháng này nhé.",
+    "cue": "Khi bạn chốt thời hạn cho công việc",
+    "cloze": "___ for the end of this month.",
+    "audio": "vocab/meetings-13.mp3"
+  },
+  {
+    "id": "meetings-14",
+    "chunk": "i'll send the meeting notes",
+    "meaningVi": "tôi sẽ gửi biên bản họp",
+    "example": "I'll send the meeting notes to everyone this afternoon.",
+    "exampleVi": "Tôi sẽ gửi biên bản họp cho mọi người chiều nay.",
+    "cue": "Khi bạn nhận việc ghi lại nội dung cuộc họp",
+    "cloze": "___ to everyone this afternoon.",
+    "audio": "vocab/meetings-14.mp3"
+  },
+  {
+    "id": "meetings-15",
+    "chunk": "that's all for today",
+    "meaningVi": "hôm nay chúng ta dừng ở đây",
+    "example": "That's all for today, thank you for joining.",
+    "exampleVi": "Hôm nay chúng ta dừng ở đây, cảm ơn mọi người đã tham gia.",
+    "cue": "Khi bạn kết thúc buổi họp",
+    "cloze": "___, thank you for joining.",
+    "audio": "vocab/meetings-15.mp3"
+  }
+]

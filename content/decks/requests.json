@@ -1,0 +1,152 @@
+[
+  {
+    "id": "requests-01",
+    "chunk": "could you please help me",
+    "meaningVi": "bạn có thể giúp tôi được không",
+    "example": "Could you please help me with this report?",
+    "exampleVi": "Bạn có thể giúp tôi với báo cáo này được không?",
+    "cue": "Khi bạn muốn nhờ đồng nghiệp giúp một việc",
+    "cloze": "___ with this report?",
+    "audio": "vocab/requests-01.mp3"
+  },
+  {
+    "id": "requests-02",
+    "chunk": "would you mind checking",
+    "meaningVi": "bạn có phiền kiểm tra giúp không",
+    "example": "Would you mind checking these numbers before I send them?",
+    "exampleVi": "Bạn có phiền kiểm tra giúp mấy con số này trước khi tôi gửi không?",
+    "cue": "Khi nhờ ai đó rà soát lại công việc của bạn",
+    "cloze": "___ these numbers before I send them?",
+    "audio": "vocab/requests-02.mp3"
+  },
+  {
+    "id": "requests-03",
+    "chunk": "is it okay if i",
+    "meaningVi": "tôi làm vậy có được không",
+    "example": "Is it okay if I leave the office a bit early today?",
+    "exampleVi": "Hôm nay tôi về sớm một chút có được không?",
+    "cue": "Khi xin phép làm điều gì đó",
+    "cloze": "___ leave the office a bit early today?",
+    "audio": "vocab/requests-03.mp3"
+  },
+  {
+    "id": "requests-04",
+    "chunk": "when you have a moment",
+    "meaningVi": "khi nào bạn rảnh một chút",
+    "example": "When you have a moment, could we discuss the budget?",
+    "exampleVi": "Khi nào bạn rảnh một chút, mình bàn về ngân sách được không?",
+    "cue": "Khi nhờ vả mà không muốn làm phiền ngay lập tức",
+    "cloze": "___, could we discuss the budget?",
+    "audio": "vocab/requests-04.mp3"
+  },
+  {
+    "id": "requests-05",
+    "chunk": "i was wondering if",
+    "meaningVi": "tôi không biết liệu có thể",
+    "example": "I was wondering if you could join the client call tomorrow.",
+    "exampleVi": "Tôi không biết liệu bạn có thể tham gia cuộc gọi với khách hàng ngày mai không.",
+    "cue": "Khi đề nghị một cách rất lịch sự và nhẹ nhàng",
+    "cloze": "___ you could join the client call tomorrow.",
+    "audio": "vocab/requests-05.mp3"
+  },
+  {
+    "id": "requests-06",
+    "chunk": "may i ask a favour",
+    "meaningVi": "tôi nhờ bạn một việc được không",
+    "example": "May I ask a favour? I need someone to cover my shift.",
+    "exampleVi": "Tôi nhờ bạn một việc được không? Tôi cần người trực thay ca của tôi.",
+    "cue": "Khi mở lời nhờ vả một việc hơi lớn",
+    "cloze": "___? I need someone to cover my shift.",
+    "audio": "vocab/requests-06.mp3"
+  },
+  {
+    "id": "requests-07",
+    "chunk": "could you send me",
+    "meaningVi": "bạn gửi cho tôi được không",
+    "example": "Could you send me the file by the end of the day?",
+    "exampleVi": "Bạn gửi cho tôi tệp đó trước cuối ngày được không?",
+    "cue": "Khi yêu cầu ai đó gửi tài liệu",
+    "cloze": "___ the file by the end of the day?",
+    "audio": "vocab/requests-07.mp3"
+  },
+  {
+    "id": "requests-08",
+    "chunk": "if it's not too much trouble",
+    "meaningVi": "nếu không quá phiền bạn",
+    "example": "If it's not too much trouble, please print two copies.",
+    "exampleVi": "Nếu không quá phiền bạn, hãy in giúp hai bản nhé.",
+    "cue": "Khi muốn nhờ vả thật nhã nhặn",
+    "cloze": "___, please print two copies.",
+    "audio": "vocab/requests-08.mp3"
+  },
+  {
+    "id": "requests-09",
+    "chunk": "i'd like to request",
+    "meaningVi": "tôi muốn xin",
+    "example": "I'd like to request two days of annual leave next week.",
+    "exampleVi": "Tôi muốn xin nghỉ phép hai ngày vào tuần tới.",
+    "cue": "Khi xin nghỉ phép hoặc đề nghị chính thức với quản lý",
+    "cloze": "___ two days of annual leave next week.",
+    "audio": "vocab/requests-09.mp3"
+  },
+  {
+    "id": "requests-10",
+    "chunk": "can you walk me through",
+    "meaningVi": "bạn hướng dẫn tôi từng bước được không",
+    "example": "Can you walk me through the new process, please?",
+    "exampleVi": "Bạn hướng dẫn tôi từng bước quy trình mới được không?",
+    "cue": "Khi cần ai đó giải thích chi tiết cách làm",
+    "cloze": "___ the new process, please?",
+    "audio": "vocab/requests-10.mp3"
+  },
+  {
+    "id": "requests-11",
+    "chunk": "would it be possible to",
+    "meaningVi": "liệu có thể nào",
+    "example": "Would it be possible to move the meeting to Thursday?",
+    "exampleVi": "Liệu có thể nào dời cuộc họp sang thứ Năm không?",
+    "cue": "Khi đề nghị thay đổi lịch hoặc kế hoạch",
+    "cloze": "___ move the meeting to Thursday?",
+    "audio": "vocab/requests-11.mp3"
+  },
+  {
+    "id": "requests-12",
+    "chunk": "please let me know",
+    "meaningVi": "vui lòng cho tôi biết",
+    "example": "Please let me know if you need anything else from me.",
+    "exampleVi": "Vui lòng cho tôi biết nếu bạn cần gì thêm từ tôi.",
+    "cue": "Khi kết thúc email hoặc tin nhắn công việc",
+    "cloze": "___ if you need anything else from me.",
+    "audio": "vocab/requests-12.mp3"
+  },
+  {
+    "id": "requests-13",
+    "chunk": "do you have a minute",
+    "meaningVi": "bạn có rảnh một phút không",
+    "example": "Do you have a minute? I need your advice on something.",
+    "exampleVi": "Bạn có rảnh một phút không? Tôi cần lời khuyên của bạn về một việc.",
+    "cue": "Khi muốn xin thời gian ngắn của đồng nghiệp",
+    "cloze": "___? I need your advice on something.",
+    "audio": "vocab/requests-13.mp3"
+  },
+  {
+    "id": "requests-14",
+    "chunk": "thanks in advance",
+    "meaningVi": "cảm ơn bạn trước",
+    "example": "Thanks in advance for your support with this task.",
+    "exampleVi": "Cảm ơn bạn trước vì đã hỗ trợ công việc này.",
+    "cue": "Khi kết thúc một lời nhờ vả trong email",
+    "cloze": "___ for your support with this task.",
+    "audio": "vocab/requests-14.mp3"
+  },
+  {
+    "id": "requests-15",
+    "chunk": "could i have your approval",
+    "meaningVi": "tôi xin phê duyệt của anh chị được không",
+    "example": "Could I have your approval for the training budget?",
+    "exampleVi": "Tôi xin phê duyệt của anh chị cho ngân sách đào tạo được không?",
+    "cue": "Khi cần cấp trên duyệt một đề xuất",
+    "cloze": "___ for the training budget?",
+    "audio": "vocab/requests-15.mp3"
+  }
+]

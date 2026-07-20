@@ -1,0 +1,51 @@
+{
+  "id": "sc-weekend-chat",
+  "titleVi": "Nói chuyện phiếm về cuối tuần",
+  "topic": "smalltalk",
+  "situationVi": "Sáng thứ Hai, một đồng nghiệp nước ngoài nhắn tin hỏi thăm cuối tuần của bạn. Đây là cuộc trò chuyện thân mật trước giờ làm việc.",
+  "thread": [
+    {
+      "from": "Tom (Design team)",
+      "text": "Morning! How was your weekend?"
+    },
+    {
+      "from": "Tom (Design team)",
+      "text": "Mine was pretty quiet. I just stayed home and watched movies."
+    }
+  ],
+  "hints": [
+    "Trả lời ngắn gọn về cuối tuần của bạn (đi đâu, làm gì).",
+    "Thêm một chi tiết nhỏ để cuộc trò chuyện thú vị hơn.",
+    "Hỏi lại hoặc bình luận về cuối tuần của đồng nghiệp để giữ cuộc nói chuyện tiếp tục."
+  ],
+  "modelAnswers": [
+    "Morning Tom! It was good, thanks. I went to a coffee shop with my family on Sunday. Staying home sounds nice too. Any good movies?",
+    "Good morning Tom! My weekend was really nice, thanks for asking. On Saturday I met some old friends for dinner, and on Sunday I just relaxed at home. A quiet weekend sounds great too. Did you watch anything good? I am always looking for a recommendation."
+  ],
+  "rubricVi": [
+    "Có trả lời câu hỏi về cuối tuần một cách tự nhiên không?",
+    "Có thêm ít nhất một chi tiết cụ thể không?",
+    "Có hỏi lại đồng nghiệp để giữ cuộc trò chuyện không?",
+    "Giọng điệu có thân thiện, thoải mái không?"
+  ],
+  "srsCards": [
+    {
+      "id": "sc-weekend-chat-s1",
+      "chunk": "My weekend was really nice, thanks for asking",
+      "meaningVi": "Cuối tuần của tôi rất vui, cảm ơn bạn đã hỏi thăm",
+      "audio": "vocab/sc-weekend-chat-s1.mp3"
+    },
+    {
+      "id": "sc-weekend-chat-s2",
+      "chunk": "I just relaxed at home",
+      "meaningVi": "Tôi chỉ nghỉ ngơi ở nhà thôi",
+      "audio": "vocab/sc-weekend-chat-s2.mp3"
+    },
+    {
+      "id": "sc-weekend-chat-s3",
+      "chunk": "I am always looking for a recommendation",
+      "meaningVi": "Tôi lúc nào cũng thích được gợi ý",
+      "audio": "vocab/sc-weekend-chat-s3.mp3"
+    }
+  ]
+}

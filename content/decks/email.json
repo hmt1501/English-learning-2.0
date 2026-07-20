@@ -1,0 +1,152 @@
+[
+  {
+    "id": "email-01",
+    "chunk": "hope this email finds you well",
+    "meaningVi": "hy vọng anh/chị vẫn khỏe",
+    "example": "Dear Ms. Lan, I hope this email finds you well.",
+    "exampleVi": "Kính gửi chị Lan, hy vọng chị vẫn khỏe.",
+    "cue": "Khi bạn mở đầu một email trang trọng",
+    "cloze": "Dear Ms. Lan, I ___.",
+    "audio": "vocab/email-01.mp3"
+  },
+  {
+    "id": "email-02",
+    "chunk": "i am writing to ask about",
+    "meaningVi": "tôi viết thư để hỏi về",
+    "example": "I am writing to ask about the delivery date of our order.",
+    "exampleVi": "Tôi viết thư để hỏi về ngày giao hàng của đơn hàng chúng tôi.",
+    "cue": "Khi bạn nêu lý do viết email ngay ở đầu thư",
+    "cloze": "___ the delivery date of our order.",
+    "audio": "vocab/email-02.mp3"
+  },
+  {
+    "id": "email-03",
+    "chunk": "please find attached",
+    "meaningVi": "vui lòng xem tệp đính kèm",
+    "example": "Please find attached the report for last month.",
+    "exampleVi": "Vui lòng xem tệp đính kèm là báo cáo của tháng trước.",
+    "cue": "Khi bạn gửi kèm tài liệu trong email",
+    "cloze": "___ the report for last month.",
+    "audio": "vocab/email-03.mp3"
+  },
+  {
+    "id": "email-04",
+    "chunk": "thank you for your quick reply",
+    "meaningVi": "cảm ơn anh/chị đã trả lời nhanh",
+    "example": "Thank you for your quick reply about the budget.",
+    "exampleVi": "Cảm ơn anh đã trả lời nhanh về vấn đề ngân sách.",
+    "cue": "Khi ai đó vừa phản hồi email của bạn rất sớm",
+    "cloze": "___ about the budget.",
+    "audio": "vocab/email-04.mp3"
+  },
+  {
+    "id": "email-05",
+    "chunk": "as we discussed yesterday",
+    "meaningVi": "như chúng ta đã trao đổi hôm qua",
+    "example": "As we discussed yesterday, I will send the new price list.",
+    "exampleVi": "Như chúng ta đã trao đổi hôm qua, tôi sẽ gửi bảng giá mới.",
+    "cue": "Khi bạn nhắc lại nội dung đã bàn trước đó",
+    "cloze": "___, I will send the new price list.",
+    "audio": "vocab/email-05.mp3"
+  },
+  {
+    "id": "email-06",
+    "chunk": "just a friendly reminder",
+    "meaningVi": "xin nhắc nhẹ",
+    "example": "Just a friendly reminder that the deadline is this Friday.",
+    "exampleVi": "Xin nhắc nhẹ rằng hạn chót là thứ Sáu này.",
+    "cue": "Khi bạn nhắc đồng nghiệp về việc chưa làm mà không muốn gây khó chịu",
+    "cloze": "___ that the deadline is this Friday.",
+    "audio": "vocab/email-06.mp3"
+  },
+  {
+    "id": "email-07",
+    "chunk": "could you please confirm",
+    "meaningVi": "anh/chị vui lòng xác nhận giúp",
+    "example": "Could you please confirm the meeting time by tomorrow?",
+    "exampleVi": "Anh vui lòng xác nhận giúp giờ họp trước ngày mai nhé?",
+    "cue": "Khi bạn cần đối phương xác nhận thông tin",
+    "cloze": "___ the meeting time by tomorrow?",
+    "audio": "vocab/email-07.mp3"
+  },
+  {
+    "id": "email-08",
+    "chunk": "sorry for the late reply",
+    "meaningVi": "xin lỗi vì trả lời muộn",
+    "example": "I am sorry for the late reply, I was away on business.",
+    "exampleVi": "Tôi xin lỗi vì trả lời muộn, tôi đã đi công tác.",
+    "cue": "Khi bạn phản hồi email sau vài ngày",
+    "cloze": "I am ___, I was away on business.",
+    "audio": "vocab/email-08.mp3"
+  },
+  {
+    "id": "email-09",
+    "chunk": "if you have any questions",
+    "meaningVi": "nếu anh/chị có thắc mắc gì",
+    "example": "Please let me know if you have any questions about the plan.",
+    "exampleVi": "Nếu anh có thắc mắc gì về kế hoạch, xin cho tôi biết.",
+    "cue": "Khi bạn kết thúc email và mời người nhận hỏi thêm",
+    "cloze": "Please let me know ___ about the plan.",
+    "audio": "vocab/email-09.mp3"
+  },
+  {
+    "id": "email-10",
+    "chunk": "look forward to hearing from you",
+    "meaningVi": "mong sớm nhận được phản hồi",
+    "example": "I look forward to hearing from you soon.",
+    "exampleVi": "Tôi mong sớm nhận được phản hồi từ anh.",
+    "cue": "Khi bạn kết email và chờ câu trả lời",
+    "cloze": "I ___ soon.",
+    "audio": "vocab/email-10.mp3"
+  },
+  {
+    "id": "email-11",
+    "chunk": "i am copying my manager",
+    "meaningVi": "tôi cc quản lý của tôi",
+    "example": "I am copying my manager so she can follow this case.",
+    "exampleVi": "Tôi cc quản lý của tôi để chị ấy theo dõi vụ việc này.",
+    "cue": "Khi bạn thêm người khác vào email",
+    "cloze": "___ so she can follow this case.",
+    "audio": "vocab/email-11.mp3"
+  },
+  {
+    "id": "email-12",
+    "chunk": "at your earliest convenience",
+    "meaningVi": "sớm nhất khi anh/chị có thể",
+    "example": "Please send the signed contract at your earliest convenience.",
+    "exampleVi": "Vui lòng gửi hợp đồng đã ký sớm nhất khi anh có thể.",
+    "cue": "Khi bạn muốn giục lịch sự trong email trang trọng",
+    "cloze": "Please send the signed contract ___.",
+    "audio": "vocab/email-12.mp3"
+  },
+  {
+    "id": "email-13",
+    "chunk": "sorry for the inconvenience",
+    "meaningVi": "xin lỗi vì sự bất tiện",
+    "example": "The system will be down tonight, sorry for the inconvenience.",
+    "exampleVi": "Hệ thống sẽ ngừng hoạt động tối nay, xin lỗi vì sự bất tiện.",
+    "cue": "Khi bạn báo tin gây phiền cho người khác",
+    "cloze": "The system will be down tonight, ___.",
+    "audio": "vocab/email-13.mp3"
+  },
+  {
+    "id": "email-14",
+    "chunk": "i am following up on",
+    "meaningVi": "tôi xin hỏi lại về",
+    "example": "I am following up on my email from last Monday.",
+    "exampleVi": "Tôi xin hỏi lại về email tôi gửi thứ Hai tuần trước.",
+    "cue": "Khi bạn nhắc lại email chưa được trả lời",
+    "cloze": "___ my email from last Monday.",
+    "audio": "vocab/email-14.mp3"
+  },
+  {
+    "id": "email-15",
+    "chunk": "best regards",
+    "meaningVi": "trân trọng",
+    "example": "Thank you for your support. Best regards, Minh.",
+    "exampleVi": "Cảm ơn sự hỗ trợ của anh. Trân trọng, Minh.",
+    "cue": "Khi bạn ký tên cuối email công việc",
+    "cloze": "Thank you for your support. ___, Minh.",
+    "audio": "vocab/email-15.mp3"
+  }
+]

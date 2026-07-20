@@ -1,0 +1,138 @@
+{
+  "id": "dlg-deadline-delay",
+  "titleVi": "Báo cáo trễ hạn",
+  "topic": "problems",
+  "summaryVi": "Nam báo với quản lý Ha rằng báo cáo sẽ bị trễ hạn và hai người tìm cách giải quyết.",
+  "lines": [
+    {
+      "id": "dlg-deadline-delay-l01",
+      "speaker": "Nam",
+      "en": "Ha, do you have a minute? I need to talk about the sales report.",
+      "vi": "Chị Hà, chị có rảnh một phút không? Em cần nói về báo cáo doanh số.",
+      "audio": "dialogues/dlg-deadline-delay-l01.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l02",
+      "speaker": "Ha",
+      "en": "Yes, of course. Is there a problem?",
+      "vi": "Ừ, được chứ. Có vấn đề gì không em?",
+      "audio": "dialogues/dlg-deadline-delay-l02.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l03",
+      "speaker": "Nam",
+      "en": "I'm afraid I can't finish it by Friday. I'm really sorry.",
+      "vi": "Em e là em không thể hoàn thành trước thứ Sáu. Em thực sự xin lỗi.",
+      "audio": "dialogues/dlg-deadline-delay-l03.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l04",
+      "speaker": "Ha",
+      "en": "I see. What is causing the delay?",
+      "vi": "Chị hiểu rồi. Nguyên nhân chậm trễ là gì?",
+      "audio": "dialogues/dlg-deadline-delay-l04.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l05",
+      "speaker": "Nam",
+      "en": "The data from the Hanoi office is wrong. I have to check every number again.",
+      "vi": "Dữ liệu từ văn phòng Hà Nội bị sai. Em phải kiểm tra lại từng con số.",
+      "audio": "dialogues/dlg-deadline-delay-l05.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l06",
+      "speaker": "Ha",
+      "en": "That's a serious issue. How much more time do you need?",
+      "vi": "Đó là vấn đề nghiêm trọng. Em cần thêm bao nhiêu thời gian?",
+      "audio": "dialogues/dlg-deadline-delay-l06.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l07",
+      "speaker": "Nam",
+      "en": "Three working days. I can send it to you on Wednesday next week.",
+      "vi": "Ba ngày làm việc ạ. Em có thể gửi chị vào thứ Tư tuần sau.",
+      "audio": "dialogues/dlg-deadline-delay-l07.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l08",
+      "speaker": "Ha",
+      "en": "Okay. But the director needs some numbers on Friday. Can you send a short summary?",
+      "vi": "Được. Nhưng giám đốc cần một số liệu vào thứ Sáu. Em gửi một bản tóm tắt ngắn được không?",
+      "audio": "dialogues/dlg-deadline-delay-l08.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l09",
+      "speaker": "Nam",
+      "en": "Yes, I can do that. The main numbers are already correct.",
+      "vi": "Vâng, em làm được ạ. Các số liệu chính đã chính xác rồi.",
+      "audio": "dialogues/dlg-deadline-delay-l09.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l10",
+      "speaker": "Ha",
+      "en": "Good. Next time, please tell me about problems earlier.",
+      "vi": "Tốt. Lần sau em hãy báo cho chị về vấn đề sớm hơn nhé.",
+      "audio": "dialogues/dlg-deadline-delay-l10.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l11",
+      "speaker": "Nam",
+      "en": "You're right. I should have told you on Monday.",
+      "vi": "Chị nói đúng. Lẽ ra em nên nói với chị từ thứ Hai.",
+      "audio": "dialogues/dlg-deadline-delay-l11.mp3"
+    },
+    {
+      "id": "dlg-deadline-delay-l12",
+      "speaker": "Ha",
+      "en": "It's okay. I'll email the Hanoi office about the data today.",
+      "vi": "Không sao. Hôm nay chị sẽ gửi email cho văn phòng Hà Nội về dữ liệu.",
+      "audio": "dialogues/dlg-deadline-delay-l12.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dlg-deadline-delay-q1",
+      "questionVi": "Vấn đề của Nam là gì?",
+      "options": [
+        "Anh ấy làm mất báo cáo",
+        "Anh ấy không thể hoàn thành báo cáo trước thứ Sáu",
+        "Anh ấy muốn xin nghỉ phép"
+      ],
+      "answerIndex": 1,
+      "explainVi": "Nam nói anh ấy e là không thể hoàn thành báo cáo trước thứ Sáu."
+    },
+    {
+      "id": "dlg-deadline-delay-q2",
+      "questionVi": "Nguyên nhân của sự chậm trễ là gì?",
+      "options": [
+        "Máy tính của Nam bị hỏng",
+        "Nam có quá nhiều cuộc họp",
+        "Dữ liệu từ văn phòng Hà Nội bị sai"
+      ],
+      "answerIndex": 2,
+      "explainVi": "Nam giải thích rằng dữ liệu từ văn phòng Hà Nội bị sai nên anh ấy phải kiểm tra lại."
+    },
+    {
+      "id": "dlg-deadline-delay-q3",
+      "questionVi": "Ha yêu cầu Nam làm gì trước thứ Sáu?",
+      "options": [
+        "Gửi một bản tóm tắt ngắn",
+        "Hoàn thành toàn bộ báo cáo",
+        "Gọi điện cho giám đốc"
+      ],
+      "answerIndex": 0,
+      "explainVi": "Ha nói giám đốc cần số liệu vào thứ Sáu nên đề nghị Nam gửi một bản tóm tắt ngắn."
+    },
+    {
+      "id": "dlg-deadline-delay-q4",
+      "questionVi": "Ha khuyên Nam điều gì cho lần sau?",
+      "options": [
+        "Làm thêm giờ vào cuối tuần",
+        "Nhờ đồng nghiệp làm giúp",
+        "Báo cáo vấn đề sớm hơn"
+      ],
+      "answerIndex": 2,
+      "explainVi": "Ha nói lần sau Nam hãy báo cho chị ấy về vấn đề sớm hơn."
+    }
+  ]
+}

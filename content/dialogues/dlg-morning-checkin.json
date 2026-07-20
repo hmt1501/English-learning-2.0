@@ -1,0 +1,138 @@
+{
+  "id": "dlg-morning-checkin",
+  "titleVi": "Chào hỏi đầu ngày",
+  "topic": "greetings",
+  "summaryVi": "Linh và Nam gặp nhau ở văn phòng vào buổi sáng và trò chuyện ngắn về công việc trong ngày.",
+  "lines": [
+    {
+      "id": "dlg-morning-checkin-l01",
+      "speaker": "Linh",
+      "en": "Good morning, Nam. You're here early today.",
+      "vi": "Chào buổi sáng, Nam. Hôm nay anh đến sớm nhỉ.",
+      "audio": "dialogues/dlg-morning-checkin-l01.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l02",
+      "speaker": "Nam",
+      "en": "Good morning, Linh. Yes, I took the earlier bus. The traffic was terrible last week.",
+      "vi": "Chào buổi sáng, Linh. Ừ, anh đi chuyến xe buýt sớm hơn. Tuần trước kẹt xe kinh khủng.",
+      "audio": "dialogues/dlg-morning-checkin-l02.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l03",
+      "speaker": "Linh",
+      "en": "That's a good idea. How was your weekend?",
+      "vi": "Ý hay đấy. Cuối tuần của anh thế nào?",
+      "audio": "dialogues/dlg-morning-checkin-l03.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l04",
+      "speaker": "Nam",
+      "en": "It was nice, thanks. I visited my parents in Da Nang. How about you?",
+      "vi": "Khá vui, cảm ơn em. Anh về thăm bố mẹ ở Đà Nẵng. Còn em thì sao?",
+      "audio": "dialogues/dlg-morning-checkin-l04.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l05",
+      "speaker": "Linh",
+      "en": "I just stayed home and rested. I needed a quiet weekend.",
+      "vi": "Em chỉ ở nhà nghỉ ngơi thôi. Em cần một cuối tuần yên tĩnh.",
+      "audio": "dialogues/dlg-morning-checkin-l05.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l06",
+      "speaker": "Nam",
+      "en": "You deserve it. Last week was very busy for the whole team.",
+      "vi": "Em xứng đáng mà. Tuần trước cả nhóm bận lắm.",
+      "audio": "dialogues/dlg-morning-checkin-l06.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l07",
+      "speaker": "Linh",
+      "en": "It was. By the way, do we have the team meeting this morning?",
+      "vi": "Đúng vậy. Nhân tiện, sáng nay mình có họp nhóm không anh?",
+      "audio": "dialogues/dlg-morning-checkin-l07.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l08",
+      "speaker": "Nam",
+      "en": "Yes, at nine thirty in room B. Mai sent the invitation yesterday.",
+      "vi": "Có, lúc chín giờ rưỡi ở phòng B. Mai đã gửi lời mời họp hôm qua.",
+      "audio": "dialogues/dlg-morning-checkin-l08.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l09",
+      "speaker": "Linh",
+      "en": "Thanks for reminding me. I'll check my email now.",
+      "vi": "Cảm ơn anh đã nhắc. Em sẽ kiểm tra email ngay bây giờ.",
+      "audio": "dialogues/dlg-morning-checkin-l09.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l10",
+      "speaker": "Nam",
+      "en": "No problem. Would you like a coffee before we start?",
+      "vi": "Không có gì. Em có muốn uống cà phê trước khi bắt đầu không?",
+      "audio": "dialogues/dlg-morning-checkin-l10.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l11",
+      "speaker": "Linh",
+      "en": "Yes, please. A small iced coffee would be great.",
+      "vi": "Có ạ. Một ly cà phê đá nhỏ thì tuyệt.",
+      "audio": "dialogues/dlg-morning-checkin-l11.mp3"
+    },
+    {
+      "id": "dlg-morning-checkin-l12",
+      "speaker": "Nam",
+      "en": "Okay, I'll get it. See you in the meeting room.",
+      "vi": "Được, anh sẽ mua. Gặp em ở phòng họp nhé.",
+      "audio": "dialogues/dlg-morning-checkin-l12.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dlg-morning-checkin-q1",
+      "questionVi": "Vì sao Nam đến văn phòng sớm hơn?",
+      "options": [
+        "Vì anh ấy phải chuẩn bị phòng họp",
+        "Vì anh ấy đi chuyến xe buýt sớm hơn để tránh kẹt xe",
+        "Vì sếp yêu cầu anh ấy đến sớm"
+      ],
+      "answerIndex": 1,
+      "explainVi": "Nam nói anh ấy đi chuyến xe buýt sớm hơn vì tuần trước kẹt xe rất tệ."
+    },
+    {
+      "id": "dlg-morning-checkin-q2",
+      "questionVi": "Cuối tuần Nam đã làm gì?",
+      "options": [
+        "Về Đà Nẵng thăm bố mẹ",
+        "Ở nhà nghỉ ngơi",
+        "Đi làm thêm ở văn phòng"
+      ],
+      "answerIndex": 0,
+      "explainVi": "Nam nói anh ấy về thăm bố mẹ ở Đà Nẵng."
+    },
+    {
+      "id": "dlg-morning-checkin-q3",
+      "questionVi": "Cuộc họp nhóm diễn ra khi nào và ở đâu?",
+      "options": [
+        "Chín giờ ở phòng A",
+        "Mười giờ rưỡi ở phòng B",
+        "Chín giờ rưỡi ở phòng B"
+      ],
+      "answerIndex": 2,
+      "explainVi": "Nam nói cuộc họp lúc chín giờ rưỡi ở phòng B."
+    },
+    {
+      "id": "dlg-morning-checkin-q4",
+      "questionVi": "Nam đề nghị làm gì cho Linh?",
+      "options": [
+        "Gửi lại email mời họp",
+        "Mua cho cô ấy một ly cà phê",
+        "Chở cô ấy về nhà"
+      ],
+      "answerIndex": 1,
+      "explainVi": "Nam hỏi Linh có muốn uống cà phê không và đồng ý đi mua."
+    }
+  ]
+}

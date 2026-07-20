@@ -1,0 +1,152 @@
+[
+  {
+    "id": "smalltalk-01",
+    "chunk": "how was your weekend",
+    "meaningVi": "cuối tuần của bạn thế nào",
+    "example": "Good morning, Linh. How was your weekend?",
+    "exampleVi": "Chào buổi sáng, Linh. Cuối tuần của bạn thế nào?",
+    "cue": "Khi gặp đồng nghiệp sáng thứ Hai",
+    "cloze": "Good morning, Linh. ___?",
+    "audio": "vocab/smalltalk-01.mp3"
+  },
+  {
+    "id": "smalltalk-02",
+    "chunk": "nothing much, just relaxed",
+    "meaningVi": "không có gì nhiều, chỉ nghỉ ngơi thôi",
+    "example": "Nothing much, just relaxed at home with my family.",
+    "exampleVi": "Không có gì nhiều, chỉ nghỉ ngơi ở nhà với gia đình thôi.",
+    "cue": "Khi ai đó hỏi cuối tuần bạn làm gì",
+    "cloze": "___ at home with my family.",
+    "audio": "vocab/smalltalk-02.mp3"
+  },
+  {
+    "id": "smalltalk-03",
+    "chunk": "it's really hot today",
+    "meaningVi": "hôm nay trời nóng thật",
+    "example": "It's really hot today, isn't it?",
+    "exampleVi": "Hôm nay trời nóng thật, phải không?",
+    "cue": "Khi muốn bắt chuyện bằng chủ đề thời tiết",
+    "cloze": "___, isn't it?",
+    "audio": "vocab/smalltalk-03.mp3"
+  },
+  {
+    "id": "smalltalk-04",
+    "chunk": "have you had lunch yet",
+    "meaningVi": "bạn ăn trưa chưa",
+    "example": "Have you had lunch yet, or should we go together?",
+    "exampleVi": "Bạn ăn trưa chưa, hay là mình đi ăn cùng nhau nhé?",
+    "cue": "Khi gặp đồng nghiệp gần giờ nghỉ trưa",
+    "cloze": "___, or should we go together?",
+    "audio": "vocab/smalltalk-04.mp3"
+  },
+  {
+    "id": "smalltalk-05",
+    "chunk": "how's everything going",
+    "meaningVi": "mọi thứ dạo này thế nào",
+    "example": "Hi Mai, how's everything going with your new team?",
+    "exampleVi": "Chào Mai, mọi thứ dạo này thế nào với nhóm mới của bạn?",
+    "cue": "Khi hỏi thăm tình hình chung của đồng nghiệp",
+    "cloze": "Hi Mai, ___ with your new team?",
+    "audio": "vocab/smalltalk-05.mp3"
+  },
+  {
+    "id": "smalltalk-06",
+    "chunk": "long time no see",
+    "meaningVi": "lâu rồi không gặp",
+    "example": "Long time no see! You look great.",
+    "exampleVi": "Lâu rồi không gặp! Trông bạn tuyệt lắm.",
+    "cue": "Khi gặp lại đồng nghiệp sau một thời gian dài",
+    "cloze": "___! You look great.",
+    "audio": "vocab/smalltalk-06.mp3"
+  },
+  {
+    "id": "smalltalk-07",
+    "chunk": "busy day today",
+    "meaningVi": "hôm nay bận rộn nhỉ",
+    "example": "Busy day today, isn't it? My inbox is full.",
+    "exampleVi": "Hôm nay bận rộn nhỉ? Hộp thư của tôi đầy rồi.",
+    "cue": "Khi muốn chia sẻ về khối lượng công việc trong ngày",
+    "cloze": "___, isn't it? My inbox is full.",
+    "audio": "vocab/smalltalk-07.mp3"
+  },
+  {
+    "id": "smalltalk-08",
+    "chunk": "any plans for the weekend",
+    "meaningVi": "cuối tuần bạn có kế hoạch gì không",
+    "example": "Any plans for the weekend, or are you staying home?",
+    "exampleVi": "Cuối tuần bạn có kế hoạch gì không, hay là bạn ở nhà?",
+    "cue": "Khi trò chuyện với đồng nghiệp vào chiều thứ Sáu",
+    "cloze": "___, or are you staying home?",
+    "audio": "vocab/smalltalk-08.mp3"
+  },
+  {
+    "id": "smalltalk-09",
+    "chunk": "grab a coffee",
+    "meaningVi": "đi uống cà phê nhanh",
+    "example": "Do you want to grab a coffee before the meeting?",
+    "exampleVi": "Bạn có muốn đi uống cà phê nhanh trước cuộc họp không?",
+    "cue": "Khi rủ đồng nghiệp nghỉ giải lao ngắn",
+    "cloze": "Do you want to ___ before the meeting?",
+    "audio": "vocab/smalltalk-09.mp3"
+  },
+  {
+    "id": "smalltalk-10",
+    "chunk": "how is your family",
+    "meaningVi": "gia đình bạn khỏe không",
+    "example": "How is your family? I heard your son just started school.",
+    "exampleVi": "Gia đình bạn khỏe không? Tôi nghe nói con trai bạn vừa đi học.",
+    "cue": "Khi hỏi thăm chuyện gia đình của đồng nghiệp thân",
+    "cloze": "___? I heard your son just started school.",
+    "audio": "vocab/smalltalk-10.mp3"
+  },
+  {
+    "id": "smalltalk-11",
+    "chunk": "the traffic was terrible",
+    "meaningVi": "giao thông kẹt kinh khủng",
+    "example": "Sorry I'm late, the traffic was terrible this morning.",
+    "exampleVi": "Xin lỗi tôi đến muộn, giao thông kẹt kinh khủng sáng nay.",
+    "cue": "Khi giải thích lý do đến trễ hoặc bắt chuyện buổi sáng",
+    "cloze": "Sorry I'm late, ___ this morning.",
+    "audio": "vocab/smalltalk-11.mp3"
+  },
+  {
+    "id": "smalltalk-12",
+    "chunk": "have a nice evening",
+    "meaningVi": "chúc bạn buổi tối vui vẻ",
+    "example": "See you tomorrow, and have a nice evening!",
+    "exampleVi": "Hẹn gặp bạn ngày mai, và chúc bạn buổi tối vui vẻ!",
+    "cue": "Khi chào tạm biệt đồng nghiệp lúc tan làm",
+    "cloze": "See you tomorrow, and ___!",
+    "audio": "vocab/smalltalk-12.mp3"
+  },
+  {
+    "id": "smalltalk-13",
+    "chunk": "where are you from",
+    "meaningVi": "bạn quê ở đâu",
+    "example": "Where are you from? I'm from Da Nang.",
+    "exampleVi": "Bạn quê ở đâu? Tôi đến từ Đà Nẵng.",
+    "cue": "Khi làm quen với đồng nghiệp mới",
+    "cloze": "___? I'm from Da Nang.",
+    "audio": "vocab/smalltalk-13.mp3"
+  },
+  {
+    "id": "smalltalk-14",
+    "chunk": "that sounds interesting",
+    "meaningVi": "nghe thú vị đấy",
+    "example": "That sounds interesting. Please tell me more about it.",
+    "exampleVi": "Nghe thú vị đấy. Kể thêm cho tôi nghe với.",
+    "cue": "Khi muốn thể hiện bạn đang lắng nghe và quan tâm",
+    "cloze": "___. Please tell me more about it.",
+    "audio": "vocab/smalltalk-14.mp3"
+  },
+  {
+    "id": "smalltalk-15",
+    "chunk": "let's catch up later",
+    "meaningVi": "lát nữa mình nói chuyện tiếp nhé",
+    "example": "I have a call now, so let's catch up later.",
+    "exampleVi": "Bây giờ tôi có cuộc gọi, nên lát nữa mình nói chuyện tiếp nhé.",
+    "cue": "Khi bạn cần kết thúc cuộc trò chuyện một cách lịch sự",
+    "cloze": "I have a call now, so ___.",
+    "audio": "vocab/smalltalk-15.mp3"
+  }
+]

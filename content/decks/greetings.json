@@ -1,0 +1,152 @@
+[
+  {
+    "id": "greetings-01",
+    "chunk": "nice to meet you",
+    "meaningVi": "rất vui được gặp bạn",
+    "example": "It's nice to meet you, Mr. Tran.",
+    "exampleVi": "Rất vui được gặp anh, anh Trần.",
+    "cue": "Khi bạn gặp một người lần đầu tiên",
+    "cloze": "It's ___, Mr. Tran.",
+    "audio": "vocab/greetings-01.mp3"
+  },
+  {
+    "id": "greetings-02",
+    "chunk": "how have you been",
+    "meaningVi": "dạo này bạn thế nào",
+    "example": "Long time no see! How have you been?",
+    "exampleVi": "Lâu quá không gặp! Dạo này anh thế nào?",
+    "cue": "Khi bạn gặp lại đồng nghiệp sau một thời gian dài",
+    "cloze": "Long time no see! ___?",
+    "audio": "vocab/greetings-02.mp3"
+  },
+  {
+    "id": "greetings-03",
+    "chunk": "let me introduce myself",
+    "meaningVi": "để tôi tự giới thiệu",
+    "example": "Let me introduce myself, I'm the new marketing assistant.",
+    "exampleVi": "Để tôi tự giới thiệu, tôi là trợ lý marketing mới.",
+    "cue": "Khi bạn là người mới và cần giới thiệu bản thân",
+    "cloze": "___, I'm the new marketing assistant.",
+    "audio": "vocab/greetings-03.mp3"
+  },
+  {
+    "id": "greetings-04",
+    "chunk": "i work in the sales team",
+    "meaningVi": "tôi làm ở bộ phận kinh doanh",
+    "example": "I work in the sales team on the fifth floor.",
+    "exampleVi": "Tôi làm ở bộ phận kinh doanh trên tầng năm.",
+    "cue": "Khi bạn nói cho người khác biết mình làm ở phòng ban nào",
+    "cloze": "___ on the fifth floor.",
+    "audio": "vocab/greetings-04.mp3"
+  },
+  {
+    "id": "greetings-05",
+    "chunk": "how is your day going",
+    "meaningVi": "hôm nay của bạn thế nào",
+    "example": "Good morning, Anna. How is your day going?",
+    "exampleVi": "Chào buổi sáng, Anna. Hôm nay của chị thế nào?",
+    "cue": "Khi bạn chào hỏi đồng nghiệp giữa ngày làm việc",
+    "cloze": "Good morning, Anna. ___?",
+    "audio": "vocab/greetings-05.mp3"
+  },
+  {
+    "id": "greetings-06",
+    "chunk": "have we met before",
+    "meaningVi": "chúng ta đã gặp nhau chưa nhỉ",
+    "example": "Excuse me, have we met before? Your face looks familiar.",
+    "exampleVi": "Xin lỗi, chúng ta đã gặp nhau chưa nhỉ? Trông anh quen quá.",
+    "cue": "Khi bạn thấy ai đó quen nhưng không chắc",
+    "cloze": "Excuse me, ___? Your face looks familiar.",
+    "audio": "vocab/greetings-06.mp3"
+  },
+  {
+    "id": "greetings-07",
+    "chunk": "this is my colleague",
+    "meaningVi": "đây là đồng nghiệp của tôi",
+    "example": "This is my colleague, Hoa, from the finance department.",
+    "exampleVi": "Đây là đồng nghiệp của tôi, Hoa, ở phòng tài chính.",
+    "cue": "Khi bạn giới thiệu đồng nghiệp với khách hàng",
+    "cloze": "___, Hoa, from the finance department.",
+    "audio": "vocab/greetings-07.mp3"
+  },
+  {
+    "id": "greetings-08",
+    "chunk": "welcome to our office",
+    "meaningVi": "chào mừng đến văn phòng chúng tôi",
+    "example": "Welcome to our office, please have a seat.",
+    "exampleVi": "Chào mừng đến văn phòng chúng tôi, mời anh ngồi.",
+    "cue": "Khi bạn đón khách đến công ty",
+    "cloze": "___, please have a seat.",
+    "audio": "vocab/greetings-08.mp3"
+  },
+  {
+    "id": "greetings-09",
+    "chunk": "how do you spell that",
+    "meaningVi": "cái đó đánh vần thế nào",
+    "example": "Sorry, how do you spell that? I want to write it down.",
+    "exampleVi": "Xin lỗi, cái đó đánh vần thế nào? Tôi muốn ghi lại.",
+    "cue": "Khi bạn không nghe rõ tên của người mới quen",
+    "cloze": "Sorry, ___? I want to write it down.",
+    "audio": "vocab/greetings-09.mp3"
+  },
+  {
+    "id": "greetings-10",
+    "chunk": "i've heard a lot about you",
+    "meaningVi": "tôi đã nghe nhiều về bạn",
+    "example": "I've heard a lot about you from my manager.",
+    "exampleVi": "Tôi đã nghe nhiều về anh từ quản lý của tôi.",
+    "cue": "Khi bạn gặp một người mà đồng nghiệp đã nhắc đến",
+    "cloze": "___ from my manager.",
+    "audio": "vocab/greetings-10.mp3"
+  },
+  {
+    "id": "greetings-11",
+    "chunk": "how long have you worked here",
+    "meaningVi": "bạn làm ở đây bao lâu rồi",
+    "example": "How long have you worked here at the company?",
+    "exampleVi": "Chị làm ở công ty này bao lâu rồi?",
+    "cue": "Khi bạn muốn bắt chuyện với đồng nghiệp mới quen",
+    "cloze": "___ at the company?",
+    "audio": "vocab/greetings-11.mp3"
+  },
+  {
+    "id": "greetings-12",
+    "chunk": "it was great talking to you",
+    "meaningVi": "rất vui được nói chuyện với bạn",
+    "example": "It was great talking to you, let's catch up next week.",
+    "exampleVi": "Rất vui được nói chuyện với anh, tuần sau mình gặp lại nhé.",
+    "cue": "Khi bạn kết thúc một cuộc trò chuyện ngắn ở công ty",
+    "cloze": "___, let's catch up next week.",
+    "audio": "vocab/greetings-12.mp3"
+  },
+  {
+    "id": "greetings-13",
+    "chunk": "have a good weekend",
+    "meaningVi": "chúc cuối tuần vui vẻ",
+    "example": "See you on Monday, have a good weekend!",
+    "exampleVi": "Hẹn gặp lại thứ Hai, chúc cuối tuần vui vẻ!",
+    "cue": "Khi bạn chào tạm biệt đồng nghiệp chiều thứ Sáu",
+    "cloze": "See you on Monday, ___!",
+    "audio": "vocab/greetings-13.mp3"
+  },
+  {
+    "id": "greetings-14",
+    "chunk": "please call me",
+    "meaningVi": "cứ gọi tôi là",
+    "example": "My full name is Nguyen Van Minh, but please call me Minh.",
+    "exampleVi": "Tên đầy đủ của tôi là Nguyễn Văn Minh, nhưng cứ gọi tôi là Minh.",
+    "cue": "Khi bạn muốn người khác gọi tên ngắn của mình",
+    "cloze": "My full name is Nguyen Van Minh, but ___ Minh.",
+    "audio": "vocab/greetings-14.mp3"
+  },
+  {
+    "id": "greetings-15",
+    "chunk": "i'm in charge of",
+    "meaningVi": "tôi phụ trách",
+    "example": "I'm in charge of customer support for the north region.",
+    "exampleVi": "Tôi phụ trách hỗ trợ khách hàng khu vực phía Bắc.",
+    "cue": "Khi bạn giải thích công việc chính của mình",
+    "cloze": "___ customer support for the north region.",
+    "audio": "vocab/greetings-15.mp3"
+  }
+]

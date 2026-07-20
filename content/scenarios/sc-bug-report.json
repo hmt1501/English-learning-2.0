@@ -1,0 +1,51 @@
+{
+  "id": "sc-bug-report",
+  "titleVi": "Báo lỗi hệ thống cho nhóm kỹ thuật",
+  "topic": "problems",
+  "situationVi": "Bạn phát hiện nút thanh toán trên website không hoạt động và khách hàng đang phàn nàn. Nhóm kỹ thuật hỏi bạn thông tin chi tiết.",
+  "thread": [
+    {
+      "from": "Long (IT Support)",
+      "text": "Hi, I saw your message about the website. Can you tell me more?"
+    },
+    {
+      "from": "Long (IT Support)",
+      "text": "What exactly is not working, and when did it start?"
+    }
+  ],
+  "hints": [
+    "Mô tả rõ vấn đề là gì (nút nào, trang nào không chạy).",
+    "Cho biết vấn đề bắt đầu từ khi nào và ảnh hưởng ra sao.",
+    "Đề nghị giúp thêm, ví dụ gửi ảnh chụp màn hình."
+  ],
+  "modelAnswers": [
+    "Hi Long, the payment button on the checkout page does not work. It started this morning around 9 AM. Two customers already complained. I can send you a screenshot if that helps.",
+    "Hi Long, thanks for the quick reply. The problem is on the checkout page: when customers click the payment button, nothing happens. It started this morning around 9 AM, and two customers have already complained. This is quite urgent for us. I can send you a screenshot if that helps, and I am happy to test again after you fix it."
+  ],
+  "rubricVi": [
+    "Có mô tả lỗi cụ thể và dễ hiểu không?",
+    "Có nói thời điểm lỗi bắt đầu không?",
+    "Có nêu mức độ ảnh hưởng (khách hàng phàn nàn) không?",
+    "Có đề nghị hỗ trợ thêm không?"
+  ],
+  "srsCards": [
+    {
+      "id": "sc-bug-report-s1",
+      "chunk": "the payment button on the checkout page does not work",
+      "meaningVi": "nút thanh toán ở trang thanh toán không hoạt động",
+      "audio": "vocab/sc-bug-report-s1.mp3"
+    },
+    {
+      "id": "sc-bug-report-s2",
+      "chunk": "It started this morning around 9 AM",
+      "meaningVi": "Lỗi bắt đầu từ sáng nay khoảng 9 giờ",
+      "audio": "vocab/sc-bug-report-s2.mp3"
+    },
+    {
+      "id": "sc-bug-report-s3",
+      "chunk": "I can send you a screenshot if that helps",
+      "meaningVi": "Tôi có thể gửi ảnh chụp màn hình nếu điều đó giúp ích",
+      "audio": "vocab/sc-bug-report-s3.mp3"
+    }
+  ]
+}

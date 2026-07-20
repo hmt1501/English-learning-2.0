@@ -1,0 +1,152 @@
+[
+  {
+    "id": "problems-01",
+    "chunk": "we have a small problem",
+    "meaningVi": "chúng ta có một vấn đề nhỏ",
+    "example": "We have a small problem with the payment system.",
+    "exampleVi": "Chúng ta có một vấn đề nhỏ với hệ thống thanh toán.",
+    "cue": "Khi bắt đầu báo cáo một sự cố cho đồng nghiệp",
+    "cloze": "___ with the payment system.",
+    "audio": "vocab/problems-01.mp3"
+  },
+  {
+    "id": "problems-02",
+    "chunk": "i'm afraid we're behind schedule",
+    "meaningVi": "tôi e rằng chúng ta đang bị chậm tiến độ",
+    "example": "I'm afraid we're behind schedule on the design work.",
+    "exampleVi": "Tôi e rằng chúng ta đang bị chậm tiến độ ở phần thiết kế.",
+    "cue": "Khi báo tin xấu về tiến độ dự án",
+    "cloze": "___ on the design work.",
+    "audio": "vocab/problems-02.mp3"
+  },
+  {
+    "id": "problems-03",
+    "chunk": "could we extend the deadline",
+    "meaningVi": "chúng ta gia hạn thời hạn được không",
+    "example": "Could we extend the deadline by two days, please?",
+    "exampleVi": "Chúng ta gia hạn thời hạn thêm hai ngày được không ạ?",
+    "cue": "Khi xin thêm thời gian để hoàn thành công việc",
+    "cloze": "___ by two days, please?",
+    "audio": "vocab/problems-03.mp3"
+  },
+  {
+    "id": "problems-04",
+    "chunk": "i'm really sorry about that",
+    "meaningVi": "tôi thực sự xin lỗi về việc đó",
+    "example": "I sent the wrong file, and I'm really sorry about that.",
+    "exampleVi": "Tôi đã gửi nhầm tệp, và tôi thực sự xin lỗi về việc đó.",
+    "cue": "Khi bạn muốn xin lỗi vì một sai sót của mình",
+    "cloze": "I sent the wrong file, and ___.",
+    "audio": "vocab/problems-04.mp3"
+  },
+  {
+    "id": "problems-05",
+    "chunk": "it won't happen again",
+    "meaningVi": "chuyện này sẽ không tái diễn",
+    "example": "I understand the mistake, and it won't happen again.",
+    "exampleVi": "Tôi hiểu lỗi này, và chuyện này sẽ không tái diễn.",
+    "cue": "Khi cam kết sửa sai sau khi mắc lỗi",
+    "cloze": "I understand the mistake, and ___.",
+    "audio": "vocab/problems-05.mp3"
+  },
+  {
+    "id": "problems-06",
+    "chunk": "i need a bit more time",
+    "meaningVi": "tôi cần thêm chút thời gian",
+    "example": "I need a bit more time to finish the final check.",
+    "exampleVi": "Tôi cần thêm chút thời gian để hoàn tất khâu kiểm tra cuối.",
+    "cue": "Khi bạn chưa kịp hoàn thành đúng hạn",
+    "cloze": "___ to finish the final check.",
+    "audio": "vocab/problems-06.mp3"
+  },
+  {
+    "id": "problems-07",
+    "chunk": "something went wrong with",
+    "meaningVi": "có gì đó trục trặc với",
+    "example": "Something went wrong with the email server this morning.",
+    "exampleVi": "Có gì đó trục trặc với máy chủ email sáng nay.",
+    "cue": "Khi thông báo một sự cố kỹ thuật",
+    "cloze": "___ the email server this morning.",
+    "audio": "vocab/problems-07.mp3"
+  },
+  {
+    "id": "problems-08",
+    "chunk": "we're working on a solution",
+    "meaningVi": "chúng tôi đang tìm cách khắc phục",
+    "example": "The site is down, but we're working on a solution now.",
+    "exampleVi": "Trang web đang bị lỗi, nhưng chúng tôi đang tìm cách khắc phục ngay.",
+    "cue": "Khi trấn an khách hàng hoặc quản lý về sự cố",
+    "cloze": "The site is down, but ___ now.",
+    "audio": "vocab/problems-08.mp3"
+  },
+  {
+    "id": "problems-09",
+    "chunk": "it was my mistake",
+    "meaningVi": "đó là lỗi của tôi",
+    "example": "It was my mistake, and I will correct the report today.",
+    "exampleVi": "Đó là lỗi của tôi, và tôi sẽ sửa lại báo cáo hôm nay.",
+    "cue": "Khi bạn nhận trách nhiệm về một sai sót",
+    "cloze": "___, and I will correct the report today.",
+    "audio": "vocab/problems-09.mp3"
+  },
+  {
+    "id": "problems-10",
+    "chunk": "i'll keep you updated",
+    "meaningVi": "tôi sẽ cập nhật cho bạn",
+    "example": "I'll keep you updated as soon as I hear from the supplier.",
+    "exampleVi": "Tôi sẽ cập nhật cho bạn ngay khi nhận được tin từ nhà cung cấp.",
+    "cue": "Khi hứa sẽ báo tin tiếp về tình hình",
+    "cloze": "___ as soon as I hear from the supplier.",
+    "audio": "vocab/problems-10.mp3"
+  },
+  {
+    "id": "problems-11",
+    "chunk": "we're still waiting for",
+    "meaningVi": "chúng tôi vẫn đang chờ",
+    "example": "We're still waiting for the data from the finance team.",
+    "exampleVi": "Chúng tôi vẫn đang chờ dữ liệu từ bộ phận tài chính.",
+    "cue": "Khi giải thích lý do công việc bị đình trệ",
+    "cloze": "___ the data from the finance team.",
+    "audio": "vocab/problems-11.mp3"
+  },
+  {
+    "id": "problems-12",
+    "chunk": "thank you for your patience",
+    "meaningVi": "cảm ơn bạn đã kiên nhẫn chờ",
+    "example": "Thank you for your patience while we fix the issue.",
+    "exampleVi": "Cảm ơn bạn đã kiên nhẫn chờ trong lúc chúng tôi khắc phục sự cố.",
+    "cue": "Khi khách hàng hoặc đồng nghiệp phải chờ đợi",
+    "cloze": "___ while we fix the issue.",
+    "audio": "vocab/problems-12.mp3"
+  },
+  {
+    "id": "problems-13",
+    "chunk": "there has been a delay",
+    "meaningVi": "đã có sự chậm trễ",
+    "example": "There has been a delay in the delivery from our supplier.",
+    "exampleVi": "Đã có sự chậm trễ trong việc giao hàng từ nhà cung cấp của chúng tôi.",
+    "cue": "Khi thông báo chính thức về việc trễ hẹn",
+    "cloze": "___ in the delivery from our supplier.",
+    "audio": "vocab/problems-13.mp3"
+  },
+  {
+    "id": "problems-14",
+    "chunk": "let me look into it",
+    "meaningVi": "để tôi kiểm tra lại việc đó",
+    "example": "Let me look into it and get back to you this afternoon.",
+    "exampleVi": "Để tôi kiểm tra lại việc đó và phản hồi bạn chiều nay.",
+    "cue": "Khi ai đó báo vấn đề mà bạn chưa có câu trả lời ngay",
+    "cloze": "___ and get back to you this afternoon.",
+    "audio": "vocab/problems-14.mp3"
+  },
+  {
+    "id": "problems-15",
+    "chunk": "please accept my apologies",
+    "meaningVi": "mong anh chị nhận lời xin lỗi của tôi",
+    "example": "Please accept my apologies for the late response.",
+    "exampleVi": "Mong anh chị nhận lời xin lỗi của tôi vì đã phản hồi muộn.",
+    "cue": "Khi xin lỗi trang trọng trong email công việc",
+    "cloze": "___ for the late response.",
+    "audio": "vocab/problems-15.mp3"
+  }
+]

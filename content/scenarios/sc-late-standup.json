@@ -1,0 +1,51 @@
+{
+  "id": "sc-late-standup",
+  "titleVi": "Đi trễ họp standup buổi sáng",
+  "topic": "problems",
+  "situationVi": "Bạn bị kẹt xe và đến muộn 15 phút so với giờ họp standup hàng ngày. Quản lý của bạn nhắn tin hỏi bạn đang ở đâu.",
+  "thread": [
+    {
+      "from": "Manager Sarah",
+      "text": "Good morning! We are starting the standup now. Are you joining?"
+    },
+    {
+      "from": "Manager Sarah",
+      "text": "It's 9:15 already. Is everything okay on your side?"
+    }
+  ],
+  "hints": [
+    "Xin lỗi ngắn gọn vì đến muộn.",
+    "Nêu lý do đơn giản (kẹt xe) và cho biết khi nào bạn vào họp được.",
+    "Nói bạn sẽ cập nhật phần việc của mình sau, để nhóm không phải chờ."
+  ],
+  "modelAnswers": [
+    "Sorry for being late! I'm stuck in traffic. I'll join in about 10 minutes. Please go ahead without me.",
+    "Good morning Sarah, I'm sorry for being late. There is heavy traffic on my way to the office, so I will join in about 10 minutes. Please start without me, and I will share my update at the end. Thank you for your understanding."
+  ],
+  "rubricVi": [
+    "Có xin lỗi ngắn gọn không?",
+    "Có nêu lý do rõ ràng và ngắn không?",
+    "Có nói thời gian cụ thể bạn sẽ tham gia không?",
+    "Có đề xuất để nhóm tiếp tục mà không phải chờ không?"
+  ],
+  "srsCards": [
+    {
+      "id": "sc-late-standup-s1",
+      "chunk": "Sorry for being late",
+      "meaningVi": "Xin lỗi vì tôi đến muộn",
+      "audio": "vocab/sc-late-standup-s1.mp3"
+    },
+    {
+      "id": "sc-late-standup-s2",
+      "chunk": "I'm stuck in traffic",
+      "meaningVi": "Tôi đang bị kẹt xe",
+      "audio": "vocab/sc-late-standup-s2.mp3"
+    },
+    {
+      "id": "sc-late-standup-s3",
+      "chunk": "Please go ahead without me",
+      "meaningVi": "Mọi người cứ bắt đầu trước, đừng chờ tôi",
+      "audio": "vocab/sc-late-standup-s3.mp3"
+    }
+  ]
+}

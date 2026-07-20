@@ -1,0 +1,51 @@
+{
+  "id": "sc-meeting-reschedule",
+  "titleVi": "Xin dời cuộc họp sang ngày khác",
+  "topic": "meetings",
+  "situationVi": "Bạn có cuộc họp với đối tác vào thứ Năm lúc 2 giờ chiều, nhưng bạn bị trùng lịch với một buổi khác. Bạn cần đề nghị dời sang thời gian khác.",
+  "thread": [
+    {
+      "from": "David (Partner)",
+      "text": "Hello, just confirming our meeting on Thursday at 2 PM. Does that still work for you?"
+    },
+    {
+      "from": "David (Partner)",
+      "text": "I can also do Friday morning if Thursday is difficult."
+    }
+  ],
+  "hints": [
+    "Cảm ơn họ đã xác nhận lịch.",
+    "Nói rõ bạn không họp thứ Năm được và nêu lý do ngắn gọn.",
+    "Đề xuất một thời gian cụ thể khác và hỏi xem có phù hợp không."
+  ],
+  "modelAnswers": [
+    "Hi David, thanks for checking. Unfortunately, I have another meeting at that time. Would Friday morning at 10 AM work for you?",
+    "Hello David, thank you for confirming. Unfortunately, I have another meeting at that time on Thursday, so I would like to move our call. Friday morning works well for me. Would Friday morning at 10 AM work for you? Sorry for the change, and thank you for being flexible."
+  ],
+  "rubricVi": [
+    "Có cảm ơn người kia trước khi từ chối lịch cũ không?",
+    "Có nêu lý do ngắn gọn và lịch sự không?",
+    "Có đề xuất một thời gian mới cụ thể không?",
+    "Có hỏi lại để xác nhận thời gian mới không?"
+  ],
+  "srsCards": [
+    {
+      "id": "sc-meeting-reschedule-s1",
+      "chunk": "I have another meeting at that time",
+      "meaningVi": "Tôi có một cuộc họp khác vào giờ đó",
+      "audio": "vocab/sc-meeting-reschedule-s1.mp3"
+    },
+    {
+      "id": "sc-meeting-reschedule-s2",
+      "chunk": "Would Friday morning at 10 AM work for you?",
+      "meaningVi": "Sáng thứ Sáu lúc 10 giờ có tiện cho anh không?",
+      "audio": "vocab/sc-meeting-reschedule-s2.mp3"
+    },
+    {
+      "id": "sc-meeting-reschedule-s3",
+      "chunk": "thank you for being flexible",
+      "meaningVi": "cảm ơn anh đã linh động",
+      "audio": "vocab/sc-meeting-reschedule-s3.mp3"
+    }
+  ]
+}

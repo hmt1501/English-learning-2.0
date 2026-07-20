@@ -1,0 +1,138 @@
+{
+  "id": "dlg-project-update",
+  "titleVi": "Báo cáo tiến độ dự án",
+  "topic": "meetings",
+  "summaryVi": "Mai báo cáo tiến độ dự án website với quản lý Tuan trong cuộc họp nhóm hàng tuần.",
+  "lines": [
+    {
+      "id": "dlg-project-update-l01",
+      "speaker": "Tuan",
+      "en": "Let's start the meeting. Mai, can you give us a project update?",
+      "vi": "Chúng ta bắt đầu cuộc họp nhé. Mai, em có thể báo cáo tiến độ dự án không?",
+      "audio": "dialogues/dlg-project-update-l01.mp3"
+    },
+    {
+      "id": "dlg-project-update-l02",
+      "speaker": "Mai",
+      "en": "Sure. The new website design is about seventy percent finished.",
+      "vi": "Vâng ạ. Thiết kế website mới đã hoàn thành khoảng bảy mươi phần trăm.",
+      "audio": "dialogues/dlg-project-update-l02.mp3"
+    },
+    {
+      "id": "dlg-project-update-l03",
+      "speaker": "Tuan",
+      "en": "That sounds good. Are we still on schedule for the end of the month?",
+      "vi": "Nghe ổn đấy. Chúng ta vẫn đúng tiến độ cho cuối tháng chứ?",
+      "audio": "dialogues/dlg-project-update-l03.mp3"
+    },
+    {
+      "id": "dlg-project-update-l04",
+      "speaker": "Mai",
+      "en": "Mostly, yes. But we are waiting for the photos from the marketing team.",
+      "vi": "Hầu hết là đúng ạ. Nhưng chúng em đang chờ hình ảnh từ nhóm marketing.",
+      "audio": "dialogues/dlg-project-update-l04.mp3"
+    },
+    {
+      "id": "dlg-project-update-l05",
+      "speaker": "Tuan",
+      "en": "When did you ask them for the photos?",
+      "vi": "Em đã yêu cầu họ gửi hình từ khi nào?",
+      "audio": "dialogues/dlg-project-update-l05.mp3"
+    },
+    {
+      "id": "dlg-project-update-l06",
+      "speaker": "Mai",
+      "en": "Last Tuesday. They said they need two more days.",
+      "vi": "Thứ Ba tuần trước ạ. Họ nói họ cần thêm hai ngày nữa.",
+      "audio": "dialogues/dlg-project-update-l06.mp3"
+    },
+    {
+      "id": "dlg-project-update-l07",
+      "speaker": "Tuan",
+      "en": "Okay. I'll send them a short email today to follow up.",
+      "vi": "Được. Hôm nay anh sẽ gửi cho họ một email ngắn để nhắc lại.",
+      "audio": "dialogues/dlg-project-update-l07.mp3"
+    },
+    {
+      "id": "dlg-project-update-l08",
+      "speaker": "Mai",
+      "en": "Thank you. That will really help us finish on time.",
+      "vi": "Cảm ơn anh. Điều đó sẽ giúp chúng em hoàn thành đúng hạn.",
+      "audio": "dialogues/dlg-project-update-l08.mp3"
+    },
+    {
+      "id": "dlg-project-update-l09",
+      "speaker": "Tuan",
+      "en": "Is there anything else the team needs from me?",
+      "vi": "Nhóm còn cần gì từ anh nữa không?",
+      "audio": "dialogues/dlg-project-update-l09.mp3"
+    },
+    {
+      "id": "dlg-project-update-l10",
+      "speaker": "Mai",
+      "en": "We need one more tester for next week. Two people are on leave.",
+      "vi": "Chúng em cần thêm một người kiểm thử cho tuần tới. Hai bạn đang nghỉ phép.",
+      "audio": "dialogues/dlg-project-update-l10.mp3"
+    },
+    {
+      "id": "dlg-project-update-l11",
+      "speaker": "Tuan",
+      "en": "I'll ask Minh to join your team for a few days.",
+      "vi": "Anh sẽ nhờ Minh tham gia nhóm em trong vài ngày.",
+      "audio": "dialogues/dlg-project-update-l11.mp3"
+    },
+    {
+      "id": "dlg-project-update-l12",
+      "speaker": "Mai",
+      "en": "Perfect. I'll send you a full report on Friday.",
+      "vi": "Tuyệt vời ạ. Em sẽ gửi anh báo cáo đầy đủ vào thứ Sáu.",
+      "audio": "dialogues/dlg-project-update-l12.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dlg-project-update-q1",
+      "questionVi": "Thiết kế website mới đã hoàn thành bao nhiêu phần trăm?",
+      "options": [
+        "Khoảng năm mươi phần trăm",
+        "Khoảng bảy mươi phần trăm",
+        "Khoảng chín mươi phần trăm"
+      ],
+      "answerIndex": 1,
+      "explainVi": "Mai nói thiết kế đã hoàn thành khoảng bảy mươi phần trăm."
+    },
+    {
+      "id": "dlg-project-update-q2",
+      "questionVi": "Điều gì đang làm chậm dự án?",
+      "options": [
+        "Nhóm đang chờ hình ảnh từ nhóm marketing",
+        "Máy chủ bị hỏng",
+        "Khách hàng chưa duyệt ngân sách"
+      ],
+      "answerIndex": 0,
+      "explainVi": "Mai nói nhóm đang chờ hình ảnh từ nhóm marketing."
+    },
+    {
+      "id": "dlg-project-update-q3",
+      "questionVi": "Tuan sẽ làm gì để giúp nhóm?",
+      "options": [
+        "Lùi thời hạn dự án",
+        "Tự mình thiết kế lại website",
+        "Gửi email nhắc nhóm marketing"
+      ],
+      "answerIndex": 2,
+      "explainVi": "Tuan nói anh ấy sẽ gửi một email ngắn hôm nay để nhắc lại."
+    },
+    {
+      "id": "dlg-project-update-q4",
+      "questionVi": "Vì sao nhóm cần thêm một người kiểm thử?",
+      "options": [
+        "Vì có hai người đang nghỉ phép",
+        "Vì có nhiều lỗi mới",
+        "Vì khách hàng yêu cầu"
+      ],
+      "answerIndex": 0,
+      "explainVi": "Mai nói hai người trong nhóm đang nghỉ phép nên cần thêm một người kiểm thử."
+    }
+  ]
+}

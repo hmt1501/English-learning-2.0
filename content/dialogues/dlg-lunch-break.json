@@ -1,0 +1,138 @@
+{
+  "id": "dlg-lunch-break",
+  "titleVi": "Trò chuyện giờ nghỉ trưa",
+  "topic": "smalltalk",
+  "summaryVi": "Minh và Sarah nói chuyện phiếm trong giờ nghỉ trưa về đồ ăn và sở thích cuối tuần.",
+  "lines": [
+    {
+      "id": "dlg-lunch-break-l01",
+      "speaker": "Minh",
+      "en": "Sarah, are you going out for lunch today?",
+      "vi": "Sarah, hôm nay chị có ra ngoài ăn trưa không?",
+      "audio": "dialogues/dlg-lunch-break-l01.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l02",
+      "speaker": "Sarah",
+      "en": "I think so. I'm a bit tired of the food in the canteen.",
+      "vi": "Chắc là có. Chị hơi chán đồ ăn ở căng tin rồi.",
+      "audio": "dialogues/dlg-lunch-break-l02.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l03",
+      "speaker": "Minh",
+      "en": "Me too. There is a new noodle shop near the corner. Do you want to try it?",
+      "vi": "Em cũng vậy. Có một quán mì mới gần góc đường. Chị muốn thử không?",
+      "audio": "dialogues/dlg-lunch-break-l03.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l04",
+      "speaker": "Sarah",
+      "en": "That sounds nice. Is it expensive?",
+      "vi": "Nghe hay đấy. Có đắt không em?",
+      "audio": "dialogues/dlg-lunch-break-l04.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l05",
+      "speaker": "Minh",
+      "en": "No, a bowl is about fifty thousand dong. And the soup is really good.",
+      "vi": "Không, một tô khoảng năm mươi nghìn đồng. Và nước dùng rất ngon.",
+      "audio": "dialogues/dlg-lunch-break-l05.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l06",
+      "speaker": "Sarah",
+      "en": "Great. Is it far? I only have one hour.",
+      "vi": "Tuyệt. Có xa không? Chị chỉ có một tiếng thôi.",
+      "audio": "dialogues/dlg-lunch-break-l06.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l07",
+      "speaker": "Minh",
+      "en": "It's only five minutes on foot. We'll be back in time.",
+      "vi": "Chỉ đi bộ năm phút thôi. Mình sẽ về kịp giờ.",
+      "audio": "dialogues/dlg-lunch-break-l07.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l08",
+      "speaker": "Sarah",
+      "en": "Perfect. By the way, do you have any plans for the weekend?",
+      "vi": "Tuyệt vời. Nhân tiện, cuối tuần em có kế hoạch gì không?",
+      "audio": "dialogues/dlg-lunch-break-l08.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l09",
+      "speaker": "Minh",
+      "en": "I play badminton with my friends every Saturday morning. Do you play?",
+      "vi": "Em chơi cầu lông với bạn vào sáng thứ Bảy hàng tuần. Chị có chơi không?",
+      "audio": "dialogues/dlg-lunch-break-l09.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l10",
+      "speaker": "Sarah",
+      "en": "Not very well, but I would like to learn. Can I join you sometime?",
+      "vi": "Chị chơi không giỏi lắm, nhưng chị muốn học. Khi nào đó chị tham gia cùng được không?",
+      "audio": "dialogues/dlg-lunch-break-l10.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l11",
+      "speaker": "Minh",
+      "en": "Of course. Come this Saturday. We start at seven.",
+      "vi": "Tất nhiên rồi. Thứ Bảy này chị đến nhé. Bọn em bắt đầu lúc bảy giờ.",
+      "audio": "dialogues/dlg-lunch-break-l11.mp3"
+    },
+    {
+      "id": "dlg-lunch-break-l12",
+      "speaker": "Sarah",
+      "en": "Thanks, Minh. Now let's go before the shop gets crowded.",
+      "vi": "Cảm ơn Minh. Giờ mình đi thôi trước khi quán đông khách.",
+      "audio": "dialogues/dlg-lunch-break-l12.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dlg-lunch-break-q1",
+      "questionVi": "Vì sao Sarah muốn ra ngoài ăn trưa?",
+      "options": [
+        "Vì cô ấy có hẹn với khách hàng",
+        "Vì cô ấy hơi chán đồ ăn ở căng tin",
+        "Vì căng tin đóng cửa hôm nay"
+      ],
+      "answerIndex": 1,
+      "explainVi": "Sarah nói cô ấy hơi chán đồ ăn ở căng tin."
+    },
+    {
+      "id": "dlg-lunch-break-q2",
+      "questionVi": "Một tô mì ở quán mới giá bao nhiêu?",
+      "options": [
+        "Khoảng năm mươi nghìn đồng",
+        "Khoảng mười lăm nghìn đồng",
+        "Khoảng một trăm nghìn đồng"
+      ],
+      "answerIndex": 0,
+      "explainVi": "Minh nói một tô khoảng năm mươi nghìn đồng."
+    },
+    {
+      "id": "dlg-lunch-break-q3",
+      "questionVi": "Quán mì cách văn phòng bao xa?",
+      "options": [
+        "Đi xe máy mười lăm phút",
+        "Đi bộ hai mươi phút",
+        "Đi bộ khoảng năm phút"
+      ],
+      "answerIndex": 2,
+      "explainVi": "Minh nói quán chỉ cách năm phút đi bộ."
+    },
+    {
+      "id": "dlg-lunch-break-q4",
+      "questionVi": "Minh làm gì vào sáng thứ Bảy hàng tuần?",
+      "options": [
+        "Chơi cầu lông với bạn bè",
+        "Đi làm thêm giờ",
+        "Học tiếng Anh"
+      ],
+      "answerIndex": 0,
+      "explainVi": "Minh nói cậu ấy chơi cầu lông với bạn vào sáng thứ Bảy hàng tuần."
+    }
+  ]
+}

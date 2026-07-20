@@ -1,0 +1,42 @@
+[
+  {
+    "id": "greetings",
+    "titleVi": "Chào hỏi & làm quen",
+    "emoji": "👋"
+  },
+  {
+    "id": "email",
+    "titleVi": "Email & tin nhắn công việc",
+    "emoji": "✉️"
+  },
+  {
+    "id": "meetings",
+    "titleVi": "Họp hành",
+    "emoji": "🗓️"
+  },
+  {
+    "id": "phone",
+    "titleVi": "Gọi điện & họp online",
+    "emoji": "☎️"
+  },
+  {
+    "id": "smalltalk",
+    "titleVi": "Trò chuyện xã giao",
+    "emoji": "☕"
+  },
+  {
+    "id": "requests",
+    "titleVi": "Nhờ vả & đề nghị",
+    "emoji": "🤝"
+  },
+  {
+    "id": "problems",
+    "titleVi": "Sự cố & xin lỗi",
+    "emoji": "⚠️"
+  },
+  {
+    "id": "feedback",
+    "titleVi": "Góp ý & đánh giá",
+    "emoji": "💬"
+  }
+]

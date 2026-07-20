@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+.DS_Store
+Thumbs.db
+
+.env
+.env.local
+.env*.local
+
+# File tạm khi sinh audio bị đứt giữa chừng
+public/audio/**/*.tmp

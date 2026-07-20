@@ -1,0 +1,138 @@
+{
+  "id": "dlg-client-call",
+  "titleVi": "Cuộc gọi với khách hàng",
+  "topic": "phone",
+  "summaryVi": "Ha nhận điện thoại từ khách hàng David và sắp xếp lại lịch hẹn cho tuần sau.",
+  "lines": [
+    {
+      "id": "dlg-client-call-l01",
+      "speaker": "Ha",
+      "en": "Good afternoon, ABC Company. This is Ha speaking. How can I help you?",
+      "vi": "Chào buổi chiều, công ty ABC xin nghe. Tôi là Hà. Tôi có thể giúp gì cho anh?",
+      "audio": "dialogues/dlg-client-call-l01.mp3"
+    },
+    {
+      "id": "dlg-client-call-l02",
+      "speaker": "David",
+      "en": "Hi Ha, this is David from Green Foods. I'm calling about our order.",
+      "vi": "Chào Hà, tôi là David từ công ty Green Foods. Tôi gọi về đơn hàng của chúng tôi.",
+      "audio": "dialogues/dlg-client-call-l02.mp3"
+    },
+    {
+      "id": "dlg-client-call-l03",
+      "speaker": "Ha",
+      "en": "Of course. Could you tell me the order number, please?",
+      "vi": "Vâng ạ. Anh có thể cho tôi biết số đơn hàng được không?",
+      "audio": "dialogues/dlg-client-call-l03.mp3"
+    },
+    {
+      "id": "dlg-client-call-l04",
+      "speaker": "David",
+      "en": "It's four five two one. We ordered fifty boxes last Monday.",
+      "vi": "Là bốn năm hai một. Chúng tôi đã đặt năm mươi thùng vào thứ Hai tuần trước.",
+      "audio": "dialogues/dlg-client-call-l04.mp3"
+    },
+    {
+      "id": "dlg-client-call-l05",
+      "speaker": "Ha",
+      "en": "Thank you. Let me check the system. Could you hold for a moment?",
+      "vi": "Cảm ơn anh. Để tôi kiểm tra hệ thống. Anh vui lòng giữ máy một lát nhé?",
+      "audio": "dialogues/dlg-client-call-l05.mp3"
+    },
+    {
+      "id": "dlg-client-call-l06",
+      "speaker": "David",
+      "en": "Sure, no problem.",
+      "vi": "Được, không vấn đề gì.",
+      "audio": "dialogues/dlg-client-call-l06.mp3"
+    },
+    {
+      "id": "dlg-client-call-l07",
+      "speaker": "Ha",
+      "en": "Thank you for waiting. Your order will arrive on Thursday morning.",
+      "vi": "Cảm ơn anh đã chờ. Đơn hàng của anh sẽ đến vào sáng thứ Năm.",
+      "audio": "dialogues/dlg-client-call-l07.mp3"
+    },
+    {
+      "id": "dlg-client-call-l08",
+      "speaker": "David",
+      "en": "That's later than we expected. Is Wednesday possible?",
+      "vi": "Muộn hơn chúng tôi mong đợi. Thứ Tư có được không?",
+      "audio": "dialogues/dlg-client-call-l08.mp3"
+    },
+    {
+      "id": "dlg-client-call-l09",
+      "speaker": "Ha",
+      "en": "I'm sorry, the truck is full on Wednesday. But I can ask for an early delivery on Thursday.",
+      "vi": "Tôi xin lỗi, xe tải đã đầy vào thứ Tư. Nhưng tôi có thể xin giao sớm vào thứ Năm.",
+      "audio": "dialogues/dlg-client-call-l09.mp3"
+    },
+    {
+      "id": "dlg-client-call-l10",
+      "speaker": "David",
+      "en": "Okay, that works. Please send me an email to confirm.",
+      "vi": "Được, vậy cũng ổn. Vui lòng gửi email xác nhận cho tôi.",
+      "audio": "dialogues/dlg-client-call-l10.mp3"
+    },
+    {
+      "id": "dlg-client-call-l11",
+      "speaker": "Ha",
+      "en": "I will send it before five o'clock today. Is there anything else?",
+      "vi": "Tôi sẽ gửi trước năm giờ chiều nay. Anh còn cần gì nữa không?",
+      "audio": "dialogues/dlg-client-call-l11.mp3"
+    },
+    {
+      "id": "dlg-client-call-l12",
+      "speaker": "David",
+      "en": "No, that's all. Thank you very much for your help.",
+      "vi": "Không, vậy là đủ rồi. Cảm ơn cô rất nhiều.",
+      "audio": "dialogues/dlg-client-call-l12.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "dlg-client-call-q1",
+      "questionVi": "David gọi điện để làm gì?",
+      "options": [
+        "Để hỏi về đơn hàng của công ty anh ấy",
+        "Để xin việc",
+        "Để phàn nàn về chất lượng sản phẩm"
+      ],
+      "answerIndex": 0,
+      "explainVi": "David nói anh ấy gọi về đơn hàng của công ty Green Foods."
+    },
+    {
+      "id": "dlg-client-call-q2",
+      "questionVi": "Ban đầu đơn hàng sẽ được giao vào ngày nào?",
+      "options": [
+        "Thứ Tư",
+        "Sáng thứ Năm",
+        "Thứ Hai"
+      ],
+      "answerIndex": 1,
+      "explainVi": "Hà nói sau khi kiểm tra hệ thống rằng đơn hàng sẽ đến vào sáng thứ Năm."
+    },
+    {
+      "id": "dlg-client-call-q3",
+      "questionVi": "Vì sao Hà không thể giao hàng vào thứ Tư?",
+      "options": [
+        "Vì kho hết hàng",
+        "Vì công ty nghỉ ngày đó",
+        "Vì xe tải đã đầy vào thứ Tư"
+      ],
+      "answerIndex": 2,
+      "explainVi": "Hà giải thích rằng xe tải đã đầy vào thứ Tư."
+    },
+    {
+      "id": "dlg-client-call-q4",
+      "questionVi": "Hà hứa sẽ làm gì trước năm giờ chiều?",
+      "options": [
+        "Gọi lại cho David",
+        "Gửi email xác nhận",
+        "Giao hàng tận nơi"
+      ],
+      "answerIndex": 1,
+      "explainVi": "Hà nói cô ấy sẽ gửi email xác nhận trước năm giờ chiều."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/*
+  Màu sắc khai báo bằng BIẾN CSS để dark mode chỉ cần đổi giá trị biến,
+  không phải rải "dark:" khắp nơi trong component.
+*/
+:root {
+  --background: #f6f7f9;
+  --foreground: #16181d;
+  --card: #ffffff;
+  --card-foreground: #16181d;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --accent: #f59e0b;
+  --accent-foreground: #1c1917;
+  --muted: #6b7280;
+  --muted-bg: #eceef2;
+  --border: #dfe3ea;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f1115;
+    --foreground: #e8eaed;
+    --card: #181b21;
+    --card-foreground: #e8eaed;
+    --primary: #60a5fa;
+    --primary-foreground: #0b1220;
+    --accent: #fbbf24;
+    --accent-foreground: #1c1917;
+    --muted: #9aa1ac;
+    --muted-bg: #22262e;
+    --border: #2b303a;
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #f87171;
+  }
+}
+
+/* Cho Tailwind biết các biến trên để dùng được bg-card, text-muted... */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-bg: var(--muted-bg);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.75rem;
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* Chừa chỗ cho thanh điều hướng dưới cùng + vùng an toàn của iPhone */
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  overscroll-behavior-y: none;
+}
+
+/* Ô nhập liệu dùng chung */
+.field {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--card-foreground);
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.field:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+/* iOS tự phóng to trang khi focus vào input có font < 16px */
+input,
+textarea,
+select {
+  font-size: max(16px, 1rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

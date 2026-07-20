@@ -1,0 +1,51 @@
+{
+  "id": "sc-call-me-back",
+  "titleVi": "Nhỡ cuộc gọi và hẹn gọi lại",
+  "topic": "phone",
+  "situationVi": "Bạn đang họp nên không nghe được điện thoại từ một đồng nghiệp ở chi nhánh khác. Người đó nhắn tin lại cho bạn.",
+  "thread": [
+    {
+      "from": "Peter (Singapore office)",
+      "text": "Hi, I tried to call you but you didn't pick up."
+    },
+    {
+      "from": "Peter (Singapore office)",
+      "text": "It's about the shipping schedule. Can we talk today?"
+    }
+  ],
+  "hints": [
+    "Xin lỗi vì đã bỏ lỡ cuộc gọi và giải thích ngắn gọn lý do.",
+    "Đề xuất thời gian cụ thể để gọi lại.",
+    "Hỏi xem thời gian đó có phù hợp với họ không, hoặc mời họ đề xuất giờ khác."
+  ],
+  "modelAnswers": [
+    "Hi Peter, sorry I missed your call. I was in a meeting. I'm free after 3 PM today. Can I call you then?",
+    "Hi Peter, I am sorry I missed your call. I was in a meeting all morning and could not answer the phone. I am free after 3 PM today, so I can call you then to discuss the shipping schedule. If that time does not suit you, please suggest another time and I will make it work."
+  ],
+  "rubricVi": [
+    "Có xin lỗi vì bỏ lỡ cuộc gọi không?",
+    "Có giải thích lý do ngắn gọn không?",
+    "Có đề xuất thời gian gọi lại cụ thể không?",
+    "Có để người kia chọn giờ khác nếu cần không?"
+  ],
+  "srsCards": [
+    {
+      "id": "sc-call-me-back-s1",
+      "chunk": "sorry I missed your call",
+      "meaningVi": "xin lỗi vì tôi đã bỏ lỡ cuộc gọi của anh",
+      "audio": "vocab/sc-call-me-back-s1.mp3"
+    },
+    {
+      "id": "sc-call-me-back-s2",
+      "chunk": "I was in a meeting",
+      "meaningVi": "Lúc đó tôi đang họp",
+      "audio": "vocab/sc-call-me-back-s2.mp3"
+    },
+    {
+      "id": "sc-call-me-back-s3",
+      "chunk": "please suggest another time",
+      "meaningVi": "xin hãy đề xuất một giờ khác",
+      "audio": "vocab/sc-call-me-back-s3.mp3"
+    }
+  ]
+}
