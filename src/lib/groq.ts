@@ -10,11 +10,15 @@
 
 export const GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions";
 
-/** Danh sách model dự phòng: hết hạn mức / lỗi model thì thử model kế tiếp. */
+/**
+ * Danh sách model dự phòng: hết hạn mức / lỗi model thì thử model kế tiếp.
+ * Đối chiếu với https://console.groq.com/docs/models — Groq có gỡ model cũ,
+ * nên nếu chat báo lỗi ở MỌI model thì việc đầu tiên là kiểm tra danh sách này.
+ */
 export const GROQ_MODELS = [
   "llama-3.3-70b-versatile",
   "llama-3.1-8b-instant",
-  "gemma2-9b-it",
+  "openai/gpt-oss-20b",
 ] as const;
 
 export interface RoleplayScenario {
